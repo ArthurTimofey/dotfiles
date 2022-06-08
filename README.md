@@ -19,3 +19,4 @@ My Personal . Files
 ## TODO
 
 - [ ] Add setup script
+- [ ] Move to hyper terminal
