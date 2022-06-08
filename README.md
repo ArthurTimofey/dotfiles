@@ -5,7 +5,7 @@ My Personal . Files
 ## Setup
 
 - Install powerline font
-- `brew install spaceship` theme for .zsh
+- Install spaceship theme
 
 ## Create sym links
 
@@ -14,6 +14,7 @@ My Personal . Files
 ## Fonts
 
 - [Power Line](https://github.com/powerline/fonts)
+- [Spaceship](https://github.com/spaceship-prompt/spaceship-prompt)
 
 ## TODO
 
