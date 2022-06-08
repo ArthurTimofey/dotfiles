@@ -116,9 +116,9 @@ export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH="${HOME}/.pyenv/shims:${PATH}"
 export PATH="${HOME}/.pyenv/shims:${PATH}"
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_OPTS=‘—height=40% —preview=“cat {}” —preview-window=right:60%:wrap’
+# export FZF_DEFAULT_OPTS=‘—height=40% —preview=“cat {}” —preview-window=right:60%:wrap’
 
 export WEBOS_CLI_TV="/opt/webOS_TV_SDK/CLI/bin" #LGtv
 export LG_WEBOS_TV_SDK_HOME="/opt/webOS_TV_SDK" #LGtv

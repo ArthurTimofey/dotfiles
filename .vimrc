@@ -16,11 +16,13 @@ Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --producti
 let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
+Plug 'tomasiser/vim-code-dark'
+
 call plug#end()
 
 packloadall
 
-colorscheme onedark
+colorscheme codedark 
 syntax on
 highlight Normal ctermbg=none
 highlight LineNr ctermfg=DarkGrey
