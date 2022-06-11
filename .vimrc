@@ -21,7 +21,23 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<S-TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
 packloadall
+
+set autoindent
 
 colorscheme codedark 
 syntax on
@@ -67,3 +83,7 @@ set showmatch
 noremap <silent> <C-S>          :update<CR>
 vnoremap <silent> <C-S>         <C-C>:update<CR>
 inoremap <silent> <C-S>         <C-O>:update<CR>
+
+nnoremap <c-s> :w<CR> # normal mode: save
+inoremap <c-s> <Esc>:w<CR>l # insert mode: escape to normal and save
+vnoremap <c-s> <Esc>:w<CR> # visual mode: escape to normal and save
