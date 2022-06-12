@@ -87,6 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
+# rmal mode: save
 #   export EDITOR='vim'
 # else
 #   export EDITOR='mvim'
@@ -122,7 +123,8 @@ export PATH="${HOME}/.pyenv/shims:${PATH}"
 
 export WEBOS_CLI_TV="/opt/webOS_TV_SDK/CLI/bin" #LGtv
 export LG_WEBOS_TV_SDK_HOME="/opt/webOS_TV_SDK" #LGtv
-
-stty start unde
+# enable control-s and control-q
+stty start undef
 stty stop undef
 setopt noflowcontrol
+

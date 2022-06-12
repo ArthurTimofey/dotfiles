@@ -6,7 +6,11 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch':'release'}
 let g:coc_global_extensions = [
-    \ 'coc-tsserver'
+    \ 'coc-tsserver',
+    \ 'coc-css',
+    \ 'coc-eslint',
+    \ 'coc-json',
+    \ 'coc-prettier',
     \ ]
 Plug 'pangloss/vim-javascript'
 Plug 'leafgarland/typescript-vim'
@@ -17,9 +21,13 @@ let g:prettier#autoformat = 1
 let g:prettier#autoformat_require_pragma = 0
 
 Plug 'tomasiser/vim-code-dark'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'ctrlpvim/ctrlp.vim'" Disable caching for ctrlp
+let g:ctrlp_use_caching = 0
 
 call plug#end()
+
+" Disable no next new line
+:set nofixendofline
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -67,7 +75,7 @@ set smartcase
 set tabstop =4
 set softtabstop =4
 set shiftwidth =4
-set textwidth =79
+set textwidth =120
 set expandtab
 set autoindent
 
@@ -80,10 +88,11 @@ set showmatch
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " Keybinds "
-noremap <silent> <C-S>          :update<CR>
-vnoremap <silent> <C-S>         <C-C>:update<CR>
-inoremap <silent> <C-S>         <C-O>:update<CR>
-
-nnoremap <c-s> :w<CR> # normal mode: save
-inoremap <c-s> <Esc>:w<CR>l # insert mode: escape to normal and save
-vnoremap <c-s> <Esc>:w<CR> # visual mode: escape to normal and save
+" ctrl s to save
+nnoremap <c-s> :w<CR> 
+inoremap <c-s> <Esc>:w<CR>l 
+vnoremap <c-s> <Esc>:w<CR> 
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
