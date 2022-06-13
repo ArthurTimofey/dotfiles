@@ -108,7 +108,8 @@ alias brow='arch --x86_64 /usr/local/Homebrew/bin/brew'
 alias ib='PATH=/usr/local/bin'
 alias mdocker='multipass docker --'
 alias vimrc='vim ~/.vimrc'
-
+alias xpck='yarn build && npm version prerelease -preid=develop && npm pack --pack-destination="$HOME/src-sixty/local-packages"' 
+alias refresh='exec zsh'
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
@@ -127,4 +128,10 @@ export LG_WEBOS_TV_SDK_HOME="/opt/webOS_TV_SDK" #LGtv
 stty start undef
 stty stop undef
 setopt noflowcontrol
+
+if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore ~/.ignore --nocolor --hidden -g ""'
+  export FZF_DEFAULT_OPTS='--preview "bat --style=numbers --color=always --line-range :500 {}"'
+fi
+
 
