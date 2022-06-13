@@ -11,6 +11,12 @@ My Personal . Files
 
 `ln -s ~/.dotfiles/.zshrc ~/.dotfiles.zshrc`
 
+## Symlink List
+
+-   .zshrc - zsh configuration
+-   .vimrc - vim configuration
+-   .ignore - fzf ignore list
+
 ## Fonts
 
 -   [Power Line](https://github.com/powerline/fonts)
@@ -20,6 +26,8 @@ My Personal . Files
 
 -   [The_Silver_Searcher](https://github.com/ggreer/the_silver_searcher)
 -   [ripgrep](https://github.com/BurntSushi/ripgrep)
+-   [fzf](https://github.com/junegunn/fzf)
+-   [bat](https://github.com/sharkdp/bat)
 
 ## TODO
 
