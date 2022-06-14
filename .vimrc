@@ -97,9 +97,11 @@ set shiftwidth =4
 set textwidth =120
 set expandtab
 set autoindent
-set clipboard=unnamedplus
+set clipboard=unnamed
 set showmatch
 
+" Automatically reload buffer for vim when editing vimrc
+autocmd BufWritePost .vimrc,_vimrc source $MYVIMRC
 " let g:NERDTreeDirArrowExpandable = '▸'
 " let g:NERDTreeDirArrowCollapsible = '▾'
 
@@ -117,6 +119,9 @@ nnoremap <c-p> :FZF<CR>
 
 " ctrl f to open search in files
 nnoremap <c-f> :Ag<CR>
+
+" going into normal mode while being inside a terminal inside a tab inside vim xD
+nnoremap <c-2> <c-w><s-n>
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin
