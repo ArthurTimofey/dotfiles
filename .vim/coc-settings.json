@@ -1,1 +1,7 @@
-{}
+{
+    "languageserver": {
+        "tsserver":{
+            "filetypes": ["js", "jsx", "ts", "tsx"]
+        }
+    }
+}

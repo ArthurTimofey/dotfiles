@@ -2,41 +2,8 @@
 
 call plug#begin()
 
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'neoclide/coc.nvim', {'branch':'release'}
-let g:coc_global_extensions = [
-    \ 'coc-tsserver',
-    \ 'coc-css',
-    \ 'coc-eslint',
-    \ 'coc-json',
-    \ 'coc-prettier',
-    \ ]
-Plug 'pangloss/vim-javascript'
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
-Plug 'styled-components/vim-styled-components', { 'branch': 'main' }
-Plug 'prettier/vim-prettier', { 'do': 'yarn install --frozen-lockfile --production' }
-let g:prettier#autoformat = 1
-let g:prettier#autoformat_require_pragma = 0
-
-Plug 'tomasiser/vim-code-dark'
-" Plug 'ctrlpvim/ctrlp.vim'" Disable caching for ctrlp
-" let g:ctrlp_use_caching = 0
-" Ignore some folders and files for CtrlP indexing
-" let g:ctrlp_custom_ignore = {
-"  \ 'dir':  '\.git$\|\.yardoc\|node_modules\|log\|tmp$',
-"  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-"  \ }
-
-Plug 'junegunn/fzf.vim'
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-
-if has('nvim') || has('patch-8.0.902')
-  Plug 'mhinz/vim-signify'
-else
-  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
-endif
+" COC Autocomplete "
+Plug 'neoclide/coc.nvim', {'branch':'release'} 
 
 call plug#end()
 

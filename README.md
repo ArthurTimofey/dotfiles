@@ -16,6 +16,7 @@ My Personal . Files
 -   .zshrc - zsh configuration
 -   .vimrc - vim configuration
 -   .ignore - fzf ignore list
+-   .vim - vim files
 
 ## Fonts
 
