@@ -1,7 +1,1 @@
-{
-    "languageserver": {
-        "tsserver":{
-            "filetypes": ["js", "jsx", "ts", "tsx"]
-        }
-    }
-}
+{ "coc.preferences.formatOnSaveFiletypes": ["*"] }
