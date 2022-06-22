@@ -108,8 +108,12 @@ alias brow='arch --x86_64 /usr/local/Homebrew/bin/brew'
 alias ib='PATH=/usr/local/bin'
 alias mdocker='multipass docker --'
 alias vimrc='vim ~/.vimrc'
+alias zshrc='vim ~/.zshrc' 
 alias xpck='yarn build && npm version prerelease -preid=develop && npm pack --pack-destination="$HOME/src-sixty/local-packages"' 
 alias refresh='exec zsh'
+alias sshWork="ln -sf ~/.ssh/configs/configWork ~/.ssh/config"
+alias sshHome="ln -sf ~/.ssh/configs/configHome ~/.ssh/config"
+
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
