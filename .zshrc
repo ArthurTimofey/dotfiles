@@ -111,8 +111,8 @@ alias vimrc='vim ~/.vimrc'
 alias zshrc='vim ~/.zshrc' 
 alias xpck='yarn build && npm version prerelease -preid=develop && npm pack --pack-destination="$HOME/src-sixty/local-packages"' 
 alias refresh='exec zsh'
-alias sshWork="ln -sf ~/.ssh/configs/configWork ~/.ssh/config"
-alias sshHome="ln -sf ~/.ssh/configs/configHome ~/.ssh/config"
+alias sshwork="ln -sf ~/.ssh/configs/config-work ~/.ssh/config && git config user.name 'ArthurTimofey'"
+alias sshhome="ln -sf ~/.ssh/configs/config-personal ~/.ssh/config"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
