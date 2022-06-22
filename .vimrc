@@ -11,22 +11,35 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
+"##############################
+" Plugin Manager
+"##############################
 call plug#begin()
 
-" COC Autocomplete "
-Plug 'neoclide/coc.nvim', {'branch':'release'} 
+" general "
+Plug 'neoclide/coc.nvim', {'branch':'release'} " coc
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
+Plug 'junegunn/fzf.vim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+
+if has('nvim') || has('patch-8.0.902')
+  Plug 'mhinz/vim-signify'
+else
+  Plug 'mhinz/vim-signify', { 'branch': 'legacy' }
+endif
+
+" themes "
+Plug 'tomasiser/vim-code-dark'
 
 call plug#end()
 
-
-
-
-
-
-
-
-
-
+"##############################
+" Plugins Configs
+"##############################
+let g:coc_global_extensions = ['coc-tsserver', 'coc-json', 'coc-css', 'coc-eslint', 'coc-prettier'] " global extensions for coc 
+command! -nargs=0 Prettier :CocCommand prettier.forceFormatDocument " adding Prettier command to the command list
 
 " the_silver_searcher "
 let g:ackprg = 'ag --nogroup --nocolor --column'
