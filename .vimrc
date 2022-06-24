@@ -10,10 +10,28 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
   \| PlugInstall --sync | source $MYVIMRC
 \| endif
 
+" Set the title of the Terminal to the currently open file
+function! SetTerminalTitle()
+    let titleString = expand('%:r')
+    if len(titleString) > 0
+        let &titlestring = expand('%:r')
+        " this is the format iTerm2 expects when setting the window title
+        let args = "\033];".&titlestring."\007"
+        let cmd = 'silent !echo -e "'.args.'"'
+        execute cmd
+        redraw!
+    endif
+endfunction
+
+autocmd BufEnter * call SetTerminalTitle()
+
 "##############################
 " Plugin Manager
 "##############################
 call plug#begin()
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " general "
 Plug 'neoclide/coc.nvim', {'branch':'release'} " coc
@@ -148,3 +166,22 @@ nnoremap <silent> <space>d :<C-u>CocList diagnostics<cr>
 nnoremap <silent> <space>s :<C-u>CocList -I symbols<cr>
 
 autocmd BufEnter * syntax sync fromstart
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gr <Plug>(coc-references)
+""" Fix titles for iTerm2 tabs
+" iTerm2 uses an special escape sequence to set titles. The default
+" 'title start' and 'title finish' sequences in vim can only set the
+" iTerm2 title for single-tab windows. As soon as you open a new window,
+" your title will be obscured by your iTerm2's default title.
+"
+" The solution is to set the iTerm2 magic sequences instead of the
+" generic default ones in vim. Note that these are *escape sequences*
+" and not just literal characters (control+v <esc>, and control+v control+g)
+"
+" See the following:
+"   https://linux.die.net/HOWTO/Xterm-Title-3.html
+"   https://www.iterm2.com/faq.html
+"   https://vim.fandom.com/wiki/Automatically_set_screen_title
+set t_ts=^[];
+set t_fs=^G
