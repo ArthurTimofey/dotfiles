@@ -113,6 +113,9 @@ alias xpck='yarn build && npm version prerelease -preid=develop && npm pack --pa
 alias refresh='exec zsh'
 alias sshwork="ln -sf ~/.ssh/configs/config-work ~/.ssh/config" 
 alias sshhome="ln -sf ~/.ssh/configs/config-personal ~/.ssh/config"
+alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias ef2="cd ~/src/rewrite/ease-framework-v2"
+alias ec="cd ~/src/rewrite/ease-core"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
