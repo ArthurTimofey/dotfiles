@@ -41,6 +41,8 @@ Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 Plug 'junegunn/fzf.vim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 
+Plug 'github/copilot.vim'
+
 if has('nvim') || has('patch-8.0.902')
   Plug 'mhinz/vim-signify'
 else
