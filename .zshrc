@@ -147,3 +147,6 @@ export FZF_DEFAULT_OPTS='--preview "bat --style=numbers --color=always --line-ra
 # Bun
 export BUN_INSTALL="/Users/arturs/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
+
+# lvim
+export PATH="~/.local/bin:$PATH"
