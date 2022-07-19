@@ -140,3 +140,10 @@ export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore ~/.ignore --nocolor --hidden 
 export FZF_DEFAULT_OPTS='--preview "bat --style=numbers --color=always --line-range :500 {}"'
 
 
+
+# bun completions
+[ -s "/Users/arturs/.bun/_bun" ] && source "/Users/arturs/.bun/_bun"
+
+# Bun
+export BUN_INSTALL="/Users/arturs/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
