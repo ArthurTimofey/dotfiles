@@ -6,6 +6,7 @@ My Personal . Files
 
 - Install powerline font
 - Install spaceship theme
+- Do symlinks
 
 ## Create sym links
 
