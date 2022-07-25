@@ -4,6 +4,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+source .zsh-env-vars
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -153,5 +155,5 @@ export FZF_DEFAULT_OPTS='--preview "bat --style=numbers --color=always --line-ra
 export BUN_INSTALL="/Users/arturs/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# lvim
-export PATH="~/.local/bin:$PATH"
+
+alias userSixty="$SIXTY_EMAIL"

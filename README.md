@@ -18,6 +18,7 @@ My Personal . Files
 - .ignore - fzf ignore list
 - .vim - vim files
 - nvim/init.vim - nvim files
+- env variables (.zsh-env-vars)
 
 ## Fonts
 
