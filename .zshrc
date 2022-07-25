@@ -156,5 +156,5 @@ export BUN_INSTALL="/Users/arturs/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 
-alias userSixty="git config --global user.email "$SIXTY_EMAIL""
-alias userArturs="git config --global user.email "$PERSONAL_EMAIL""
+alias userArturs="git config --global user.email "$PERSONAL_EMAIL" && git config --global user.name ArthurTimofey"
+alias userSixty="git config --global user.email "$SIXTY_EMAIL" && git config --global user.name ArtursTimofejevs"
