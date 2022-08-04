@@ -1,0 +1,13 @@
+- defaults:
+    link:
+      relink: true
+
+- link:
+    ~/.vim: .vim
+    ~/.vimrc: .vimrc 
+
+- create: 
+    - ~/.config/nvim/colors
+
+- shell:
+  - curl https://raw.githubusercontent.com/jacoborus/tender.vim/master/colors/tender.vim > ~/.config/nvim/colors/tender.vim
