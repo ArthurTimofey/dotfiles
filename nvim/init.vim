@@ -21,6 +21,7 @@ filetype plugin indent on
 syntax on
 
 set t_Co=256
+colorscheme tender
 
 " True color if available
 let term_program=$TERM_PROGRAM
@@ -41,7 +42,6 @@ let &t_ZR="\e[23m"
 " File browser
 let g:netrw_banner=0
 let g:netrw_liststyle=0
-let g:netrw_browse_split=4
 let g:netrw_altv=1
 let g:netrw_winsize=25
 let g:netrw_keepdir=0
