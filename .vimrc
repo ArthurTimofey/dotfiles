@@ -1,14 +1,4 @@
-" Vim Configuration File "
-" Install vim-plug if not found
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
-    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-endif
 
-" Run PlugInstall if there are missing plugins
-autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
-  \| PlugInstall --sync | source $MYVIMRC
-\| endif
 
 " Set the title of the Terminal to the currently open file
 function! SetTerminalTitle()
@@ -98,7 +88,7 @@ syntax on
 " enable line numbers "
 set number
 
-" Use FZF in VIM "
+ Use FZF in VIM "
 " set rtp+=/opt/homebrew/opt/fzf
 " let $FZF_DEFAULT_COMMAND='find . \( -name node_modules -o -name .git \) -prune -o -print'
 " let $FZF_DEFAULT_COMMAND='rg'

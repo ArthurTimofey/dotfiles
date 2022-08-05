@@ -50,6 +50,17 @@ let g:netrw_winsize=25
 let g:netrw_keepdir=0
 let g:netrw_localcopydircmd='cp -r'
 
+" Automatically reload buffer for vim when editing vimrc
+autocmd BufWritePost .vimrc,_vimrc,init.vim source $MYVIMRC
+
+" Copilot
+imap <c-space> <Plug>(copilot-next)
+
+" FZF
+set rtp+=./config/nvim/pack/junegunn/start/fzf
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 1, 'yoffset': 1.0 } }
+let g:ackprg = 'ag --nogroup --nocolor --column'
+
 " Key bindings
 " enable ctrl + s to save
 nnoremap <c-s> :w<CR>
@@ -59,4 +70,6 @@ vnoremap <c-s> <Esc>:w<CR>
 let mapleader = ','
 nnoremap <leader>a :source $MYVIMRC<CR>
 nnoremap <c-p> :Exp<CR>
+nnoremap <c-p> :FZF<CR> 
+nnoremap <c-g> :Ag<CR>
 

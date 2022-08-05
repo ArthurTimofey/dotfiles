@@ -13,7 +13,15 @@
     - ~/.config/nvim/pack  
 
 - shell:
+
+  # vim plugins
   - rm -rf ~/.config/nvim/pack/github && git clone https://github.com/github/copilot.vim.git  ~/.config/nvim/pack/github/start/copilot.vim
   - rm -rf ~/.config/nvim/pack/vim-airline && git clone https://github.com/vim-airline/vim-airline.git ~/.config/nvim/pack/vim-airline/start/vim-airline.vim
   - rm -rf ~/.config/nvim/pack/jacoborus && git clone https://github.com/jacoborus/tender.vim.git ~/.config/nvim/pack/jacoborus/start/tender.vim
-  
+  - rm -rf ~/.config/nvim/pack/junegunn 
+  - git clone https://github.com/junegunn/fzf.vim.git ~/.config/nvim/pack/junegunn/start/fzf.vim 
+  - git clone https://github.com/junegunn/fzf.git ~/.config/nvim/pack/junegunn/start/fzf
+
+  # brew
+  - brew install fzf
+  - brew install bat
