@@ -23,6 +23,9 @@ syntax on
 
 set t_Co=256
 colorscheme tender
+if (has("termguicolors"))
+ set termguicolors
+endif
 
 " set airline theme
 let g:airline_theme = 'tender'
@@ -61,6 +64,19 @@ imap <c-space> <Plug>(copilot-next)
 set rtp+=./config/nvim/pack/junegunn/start/fzf
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 1, 'yoffset': 1.0 } }
 let g:ackprg = 'ag --nogroup --nocolor --column'
+
+" COC
+hi CocErrorSign guibg=#000000
+hi CocWarningSign guibg=#000000
+hi CocInfoSign guibg=#000000
+hi CocHintSign guibg=#000000
+hi CocErrorFloat guibg=#000000
+hi CocWarningFloat guibg=#000000
+hi CocInfoFloat guibg=#000000
+hi CocHintFloat guibg=#000000
+hi CocSelectedText guibg=#000000
+hi CocCodeLens guibg=#000000
+
 
 " Key bindings
 " enable ctrl + s to save
