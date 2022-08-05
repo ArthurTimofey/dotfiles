@@ -3,3 +3,6 @@
 .yarnrc.yml
 .zsh-env-vars
 *.swp
+
+# .dotfiles
+
