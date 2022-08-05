@@ -1,3 +1,5 @@
+- clean: ['~/.config/nvim/colors/*', '~/.config/nvim/pack/*']
+
 - defaults:
     link:
       relink: true
@@ -8,6 +10,9 @@
 
 - create: 
     - ~/.config/nvim/colors
+    - ~/.config/nvim/pack  
 
 - shell:
   - curl https://raw.githubusercontent.com/jacoborus/tender.vim/master/colors/tender.vim > ~/.config/nvim/colors/tender.vim
+  - rm -rf ~/.config/nvim/pack/github && git clone https://github.com/github/copilot.vim.git  ~/.config/nvim/pack/github/start/copilot.vim
+  
