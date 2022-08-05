@@ -23,6 +23,9 @@ syntax on
 set t_Co=256
 colorscheme tender
 
+" set airline theme
+let g:airline_theme = 'tender'
+
 " True color if available
 let term_program=$TERM_PROGRAM
 
@@ -46,3 +49,14 @@ let g:netrw_altv=1
 let g:netrw_winsize=25
 let g:netrw_keepdir=0
 let g:netrw_localcopydircmd='cp -r'
+
+" Key bindings
+" enable ctrl + s to save
+nnoremap <c-s> :w<CR>
+inoremap <c-s> <Esc>:w<CR>
+vnoremap <c-s> <Esc>:w<CR>
+
+let mapleader = ','
+nnoremap <leader>a :source $MYVIMRC<CR>
+nnoremap <c-p> :Exp<CR>
+
