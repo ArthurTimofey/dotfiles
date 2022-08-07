@@ -7,6 +7,7 @@
 - link:
     ~/.vim: .vim
     ~/.vimrc: .vimrc
+    ~/.config/coc-settings.json: ./coc/coc-coc-settings.json
 
 - create:
     - ~/.config/nvim/colors
@@ -23,6 +24,7 @@
     - rm -rf ~/.config/nvim/pack/junegunn
     - git clone https://github.com/junegunn/fzf.vim.git ~/.config/nvim/pack/junegunn/start/fzf.vim
     - git clone https://github.com/junegunn/fzf.git ~/.config/nvim/pack/junegunn/start/fzf
+    #- rm -rf ~/.config/nvim/pack/sbdchd && git clone https://github.com/sbdchd/neoformat ~/.config/nvim/pack/sbdchd/start/neoformat
 
     # brew
     - brew install fzf
