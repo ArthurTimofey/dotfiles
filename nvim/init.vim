@@ -75,6 +75,10 @@ inoremap <silent><expr> <TAB>
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
 command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
 
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
 
 " highlights 
 " hi Conceal cterm=italic,underline gui=italic,underline guibg=none guifg=#ffc24b 
