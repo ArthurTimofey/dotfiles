@@ -73,6 +73,8 @@ inoremap <silent><expr> <TAB>
       \ CheckBackspace() ? "\<Tab>" :
       \ coc#refresh()
 inoremap <expr><S-TAB> coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"
+command! -nargs=0 Prettier :call CocAction('runCommand', 'prettier.formatFile')
+
 
 " highlights 
 " hi Conceal cterm=italic,underline gui=italic,underline guibg=none guifg=#ffc24b 
