@@ -8,7 +8,8 @@
     ~/.vim: .vim
     ~/.vimrc: .vimrc
     ~/.config/nvim/init.vim: nvim/init.vim
-    ~/.config/coc-settings.json: coc/coc-settings.json
+    ~/.config/nvim/coc-settings.json: coc/coc-settings.json
+    ~/.dotfiles/.zsh-env-vars: ~/.zsh-env-vars
 
 - create:
     - ~/.config/nvim/colors

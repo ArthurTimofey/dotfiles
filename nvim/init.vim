@@ -61,6 +61,7 @@ autocmd BufWritePost .vimrc,_vimrc,init.vim source $MYVIMRC
 
 " Copilot
 imap <c-space> <Plug>(copilot-next)
+imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 
 " FZF
 set rtp+=./config/nvim/pack/junegunn/start/fzf
