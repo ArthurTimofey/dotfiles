@@ -1,5 +1,9 @@
 {
   "suggest.enablePreselect": true,
   "suggest.noselect": true,
-  "coc.preferences.formatOnSaveFiletypes": ["*"]
+  "colors.filetypes": ["*"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "*"
+  ],
+  "svelte.enable-ts-plugin": true
 }
