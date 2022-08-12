@@ -95,4 +95,5 @@ nnoremap <leader>a :source $MYVIMRC<CR>
 nnoremap <c-p> :Exp<CR>
 nnoremap <c-p> :FZF<CR> 
 nnoremap <c-g> :Ag<CR>
+tnoremap <Esc> <C-\><C-n>
 
