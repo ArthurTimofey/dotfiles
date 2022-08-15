@@ -61,7 +61,7 @@ autocmd BufWritePost .vimrc,_vimrc,init.vim source $MYVIMRC
 
 " Copilot
 imap <c-space> <Plug>(copilot-next)
-imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
+inoremap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 
 " FZF
 set rtp+=./config/nvim/pack/junegunn/start/fzf
@@ -81,6 +81,22 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
 
 
 " highlights 
