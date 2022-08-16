@@ -65,8 +65,9 @@ imap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 
 " FZF
 set rtp+=./config/nvim/pack/junegunn/start/fzf
-let g:fzf_layout = { 'window': { 'width': 1, 'height': 1, 'yoffset': 1.0 } }
+let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.3, 'yoffset': 1.0 } }
 let g:ackprg = 'ag --nogroup --nocolor --column'
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 
 " COC
 inoremap <silent><expr> <TAB>
@@ -80,6 +81,7 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
+
 
 " highlights 
 " hi Conceal cterm=italic,underline gui=italic,underline guibg=none guifg=#ffc24b 
@@ -95,5 +97,4 @@ nnoremap <leader>a :source $MYVIMRC<CR>
 nnoremap <c-p> :Exp<CR>
 nnoremap <c-p> :FZF<CR> 
 nnoremap <c-g> :Ag<CR>
-tnoremap <Esc> <C-\><C-n>
-
+command -nargs=1 E execute('silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <args>
