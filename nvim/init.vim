@@ -67,7 +67,6 @@ inoremap <silent><script><expr> <C-J> copilot#Accept("\<CR>")
 set rtp+=./config/nvim/pack/junegunn/start/fzf
 let g:fzf_layout = { 'window': { 'width': 1, 'height': 0.3, 'yoffset': 1.0 } }
 let g:ackprg = 'ag --nogroup --nocolor --column'
-tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 
 " COC
 inoremap <silent><expr> <TAB>
@@ -97,7 +96,7 @@ nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
-
+inoremap <silent><expr> <TAB> coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<TAB>"
 
 " highlights 
 " hi Conceal cterm=italic,underline gui=italic,underline guibg=none guifg=#ffc24b 
@@ -114,3 +113,4 @@ nnoremap <c-p> :Exp<CR>
 nnoremap <c-p> :FZF<CR> 
 nnoremap <c-g> :Ag<CR>
 command -nargs=1 E execute('silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <args>
+tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
