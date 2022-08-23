@@ -9,7 +9,8 @@
     ~/.vimrc: .vimrc
     ~/.config/nvim/init.vim: nvim/init.vim
     ~/.config/nvim/coc-settings.json: coc/coc-settings.json
-    ~/.dotfiles/.zsh-env-vars: ~/.zsh-env-vars
+    ~/.dotfiles/.zsh-env-vars: .zsh-env-vars
+    ~/.dotfiles/nodemon.json: nodemon.json
 
 - create:
     - ~/.config/nvim/colors
