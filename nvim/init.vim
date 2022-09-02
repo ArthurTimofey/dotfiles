@@ -13,6 +13,8 @@ set ttimeoutlen=0
 set wildmenu
 set nopaste
 set signcolumn=yes
+set title
+set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
 
 " Tabs size
 set expandtab
