@@ -1,7 +1,6 @@
 .gitsecret/keys/random_seed
 !*.secret
 .yarnrc.yml
-.zsh-env-vars
 *.swp
 
 # .dotfiles
