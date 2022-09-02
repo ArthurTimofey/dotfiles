@@ -2,7 +2,6 @@ export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="spaceship"
 
-source .zsh-env-vars
 source $HOME/.dotfiles/zshrc/.zshrc.aliases
 source $HOME/.dotfiles/zshrc/.zshrc.exports
 
