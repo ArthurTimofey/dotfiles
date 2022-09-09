@@ -15,6 +15,7 @@ set nopaste
 set signcolumn=yes
 set title
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
+set relativenumber
 
 " Tabs size
 set expandtab
