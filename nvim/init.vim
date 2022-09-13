@@ -47,6 +47,8 @@ else
     endif
 endif
 
+set rtp+=~/.config/nvim/pack/vim-svelte-plugin
+
 " Italics
 let &t_ZH="\e[3m"
 let &t_ZR="\e[23m"

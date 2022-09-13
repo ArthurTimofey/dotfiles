@@ -3,5 +3,6 @@
   "suggest.noselect": false,
   "colors.filetypes": ["*"],
   "coc.preferences.formatOnSaveFiletypes": ["*"],
-  "rust-analyzer.enable": true
+  "rust-analyzer.enable": true,
+  "svelte.enable-ts-plugin": true
 }
