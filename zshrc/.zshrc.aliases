@@ -10,4 +10,5 @@ alias userArturs="git config --global user.email "$PERSONAL_EMAIL" && git config
 alias userSixty="git config --global user.email "$SIXTY_EMAIL" && git config --global user.name ArtursTimofejevs"
 alias vi="nvim"
 alias dotfiles="cd ~/.dotfiles"
-
+alias yarn-clean="rm -rf node_modules && rm -rf yarn.lock && yarn"
+alias commit-all="git add . && git commit -m"

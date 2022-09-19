@@ -16,6 +16,7 @@ set signcolumn=yes
 set title
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
 set relativenumber
+set shell=/bin/zsh
 
 " Tabs size
 set expandtab
@@ -119,3 +120,5 @@ nnoremap <c-p> :FZF<CR>
 nnoremap <c-g> :Ag<CR>
 command -nargs=1 E execute('silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <args>
 tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
+
+set shellcmdflag=-ic
