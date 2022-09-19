@@ -18,6 +18,8 @@ set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
 set relativenumber
 set shell=/bin/zsh
 
+set shell=/bin/zsh
+
 " Tabs size
 set expandtab
 set shiftwidth=4
