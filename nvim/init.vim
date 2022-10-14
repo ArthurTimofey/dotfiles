@@ -16,9 +16,6 @@ set signcolumn=yes
 set title
 set titlestring=%t%(\ %M%)%(\ (%{expand(\"%:~:.:h\")})%)%(\ %a%)
 set relativenumber
-set shell=/bin/zsh
-
-set shell=/bin/zsh
 
 " Tabs size
 set expandtab
@@ -124,3 +121,19 @@ command -nargs=1 E execute('silent! !mkdir -p "$(dirname "<args>")"') <Bar> e <a
 tnoremap <expr> <Esc> (&filetype == "fzf") ? "<Esc>" : "<c-\><c-n>"
 
 set shellcmdflag=-ic
+
+" create a map for yanking the current path
+nnoremap <leader>y :let @+ = expand('%')<CR>
+
+if version >= 700
+    "set showtabline to show when more than one tab
+    set showtabline=1
+    "set tab labels to show at most 50 characters
+    set guitablabel=%-0.50t%M
+endif
+
+" don't show the toolbar in the GUI (only the menu)
+set guioptions-=T
+
+" don't show tear-off menus
+set guioptions-=t
