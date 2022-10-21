@@ -15,20 +15,22 @@ vim.o.relativenumber = true
 vim.o.expandtab = true
 vim.o.shiftwidth = 4
 vim.o.tabstop = 4
+vim.o.termguicolors = true
 
 -- Window Local Options
 vim.wo.cursorline = true
 
 -- Global Options
 vim.g.hidden = true
-vim.g.airline_theme = 'codedark'
+vim.g.airline_theme = 'gruvbox'
 
 -- nvim commands
 vim.api.nvim_command('filetype plugin indent on')
 vim.api.nvim_command('syntax on')
-vim.api.nvim_command('autocmd vimenter * ++nested colorscheme codedark')
--- -- reload buffer when editting
-vim.api.nvim_command('autocmd BufWritePost .vimrc,_vimrc,init.vim source $MYVIMRC')
+vim.api.nvim_command('autocmd vimenter * ++nested colorscheme gruvbox')
+vim.api.nvim_command('autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart')
+vim.api.nvim_command('autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear')
+vim.api.nvim_command('autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact')
 
 -- File Browser
 vim.g.netrw_banner=0
@@ -43,7 +45,9 @@ vim.opt.rtp = vim.opt.rtp + '~/config/nvim/pack/junegunn/start/fzf'
 vim.g.fzf_layout = {window={width=1, height=0.3, yoffset=1.0}}
 
 -- COC
-vim.g.coc_global_extensions = {'coc-prettier'}
+vim.cmd [[
+let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver']
+]]
 
 vim.o.updatetime=300
 vim.o.signcolumn='yes'
@@ -56,6 +60,10 @@ function _G.check_back_space()
 end
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
 map("i", "<TAB>", 'coc#pum#visible() ? coc#pum#confirm() : coc#refresh()', opts)
+map("n", "gd", "<Plug>(coc-definition)", {silent = true})
+map("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
+map("n", "gi", "<Plug>(coc-implementation)", {silent = true})
+map("n", "gr", "<Plug>(coc-references)", {silent = true})
 
 -- Copilot
 map('i', '<c-j>', 'copilot#Accept("\\<CR>")', opts)
