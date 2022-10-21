@@ -32,3 +32,4 @@
     ~/.hushlogin: .hushlogin
     ~/nodemon.json: nodemon/nodemon.json
     ~/.config/nvim: .config/nvim
+    ~/.ssh/config: .ssh/config
