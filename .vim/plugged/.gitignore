@@ -1,7 +1,0 @@
-# Ignore all plugins
-/*/
-
-# Except for git ignore
-!.gitignore
-
-

@@ -1,7 +1,0 @@
-{
-  "restartable": "rs",
-  "events": {
-    "restart": "yalc publish --push"
-  },
-  "ext": "ts,tsx,js,jsx,json,css,scss,sass,less,md,html,yml,yaml,toml,tsconfig.json,jsconfig.json,jsonc,css,scss,sass,less,md,html,yml,yaml,toml,tsconfig.json,jsconfig.json,jsonc"
-}

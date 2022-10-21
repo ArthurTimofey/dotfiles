@@ -1,7 +1,0 @@
-.gitsecret/keys/random_seed
-!*.secret
-.yarnrc.yml
-*.swp
-
-# .dotfiles
-
