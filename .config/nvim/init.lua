@@ -22,12 +22,12 @@ vim.wo.cursorline = true
 
 -- Global Options
 vim.g.hidden = true
-vim.g.airline_theme = 'gruvbox'
+vim.g.airline_theme = 'tokyonight-night'
 
 -- nvim commands
 vim.api.nvim_command('filetype plugin indent on')
 vim.api.nvim_command('syntax on')
-vim.api.nvim_command('autocmd vimenter * ++nested colorscheme gruvbox')
+vim.api.nvim_command('autocmd vimenter * ++nested colorscheme tokyonight')
 vim.api.nvim_command('autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart')
 vim.api.nvim_command('autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear')
 vim.api.nvim_command('autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact')
@@ -46,7 +46,7 @@ vim.g.fzf_layout = {window={width=1, height=0.3, yoffset=1.0}}
 
 -- COC
 vim.cmd [[
-let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver']
+let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-tabnine', 'coc-git', 'coc-lua']
 ]]
 
 vim.o.updatetime=300
@@ -66,7 +66,7 @@ map("n", "gi", "<Plug>(coc-implementation)", {silent = true})
 map("n", "gr", "<Plug>(coc-references)", {silent = true})
 
 -- Copilot
-map('i', '<c-j>', 'copilot#Accept("\\<CR>")', opts)
+-- map('i', '<c-j>', 'copilot#Accept("\\<CR>")', opts)
 
 -- Key Maps
 vim.g.mapleader = ','
@@ -78,8 +78,14 @@ map('i', '<c-s>', '<ESC>:w<CR>')
 map('v', '<c-s>', '<ESC>:w<CR>')
 map('n', '<leader>t', ':tabe | term<CR>')
 map('t', '<Esc>', '(&filetype == "fzf") ? "<Esc>" : "<C-\\><C-n>"', {silent = true, noremap = true, expr = true })
+-- Move to previous/next
+map('n', '<Tab>', ':BufferNext<CR>', {silent=true})
+map('n', '<s-Tab>', ':BufferPrevious<CR>', {silent=true})
+-- close buffer using <S-q> and <S-q>
+map('n', '<S-q>', ':BufferClose<CR>', {silent=true})
 
 -- Commands
 vim.api.nvim_create_user_command('E', 'execute(\'silent! !mkdir -p "$(dirname "<args>")"\') <Bar> e <args>', {nargs = 1})
 
-
+require('plugins.barbar')
+require('plugins.galaxyline')
