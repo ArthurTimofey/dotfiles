@@ -1,0 +1,14 @@
+alias brow='arch --x86_64 /usr/local/Homebrew/bin/brew'
+alias ib='PATH=/usr/local/bin'
+alias mdocker='multipass docker --'
+alias vimrc='vim ~/.vimrc'
+alias zshrc='vim ~/.zshrc' 
+alias refresh='exec zsh'
+alias gitlog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias rt="rtouch"
+alias userArturs="git config --global user.email "$PERSONAL_EMAIL" && git config --global user.name ArthurTimofey"
+alias userSixty="git config --global user.email "$SIXTY_EMAIL" && git config --global user.name ArtursTimofejevs"
+alias vi="nvim"
+alias dotfiles="cd ~/.dotfiles"
+alias yarn-clean="rm -rf node_modules && rm -rf yarn.lock && yarn"
+alias commit-all="git add . && git commit -m"
