@@ -57,6 +57,9 @@ end
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
 map("i", "<TAB>", 'coc#pum#visible() ? coc#pum#confirm() : coc#refresh()', opts)
 
+-- Copilot
+map('i', '<c-j>', 'copilot#Accept("\\<CR>")', opts)
+
 -- Key Maps
 vim.g.mapleader = ','
 map('n', '<c-p>', ':FZF<CR>') -- FZF

@@ -26,6 +26,7 @@
     - git clone https://github.com/neoclide/coc.nvim.git ~/.config/nvim/pack/neoclide/start/coc.nvim
     - cd ~/.config/nvim/pack/neoclide/start/coc.nvim && yarn
     - git clone https://github.com/tomasiser/vim-code-dark ~/.config/nvim/pack/tomasiser/start/vim-code-dark
+    - git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
 
 - link:
     ~/.zshrc: zsh/.zshrc
