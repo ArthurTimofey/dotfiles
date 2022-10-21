@@ -1,0 +1,7 @@
+package-lock.json
+/yarn.lock
+.git
+.vim
+
+# .dotfiles
+dotbot/*
