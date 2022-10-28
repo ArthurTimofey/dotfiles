@@ -8,7 +8,10 @@
 
 - shell:
     # oh my zsh
-    - ["rm -rf ~/.oh-my-zsh & rm -rf ~/.config/nvim/pack", "cleaning"]
+    - [
+        "rm -rf ~/.oh-my-zsh & rm -rf ~/.config/nvim/pack & rm -rf ~/.config/coc/extensions",
+        "cleaning",
+      ]
     - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
     # oh my zsh plugins & themes
     # - zsh-autosuggestions
@@ -24,7 +27,7 @@
     - git clone https://github.com/junegunn/fzf.git ~/.config/nvim/pack/junegunn/start/fzf
     - git clone https://github.com/neoclide/coc.nvim.git ~/.config/nvim/pack/neoclide/start/coc.nvim
     - cd ~/.config/nvim/pack/neoclide/start/coc.nvim && yarn
-    # - git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
+    - git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim
     - git clone https://github.com/peitalin/vim-jsx-typescript.git ~/.config/nvim/pack/peitalin/start/vim-jsx-typescript
     - git clone https://github.com/leafgarland/typescript-vim.git ~/.config/nvim/pack/leafgarland/start/typescript-vim
     - git clone https://github.com/styled-components/vim-styled-components.git ~/.config/nvim/pack/styled-components/start/vim-styled-components

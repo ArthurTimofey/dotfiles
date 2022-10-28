@@ -47,7 +47,7 @@ vim.g.fzf_layout = {window={width=1, height=0.3, yoffset=1.0}}
 
 -- COC
 vim.cmd [[
-let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-tabnine', 'coc-git', 'coc-lua']
+let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-git', 'coc-lua']
 ]]
 
 vim.o.updatetime=300
@@ -67,7 +67,14 @@ map("n", "gi", "<Plug>(coc-implementation)", {silent = true})
 map("n", "gr", "<Plug>(coc-references)", {silent = true})
 
 -- Copilot
--- map('i', '<c-j>', 'copilot#Accept("\\<CR>")', opts)
+vim.g.copilot_autostart = 1
+vim.g.copilot_no_tab_map = true
+map("i", "<C-j>", "copilot#Accept('\\<CR>')", {noremap = true, silent = true, expr=true })
+
+-- Commands
+vim.api.nvim_create_user_command('E', 'execute(\'silent! !mkdir -p "$(dirname "<args>")"\') <Bar> e <args>', {nargs = 1})
+-- create a command that deletes current file
+vim.api.nvim_create_user_command('D', 'execute(\'silent! !rm -rf %\')', {nargs = 0})
 
 -- Key Maps
 vim.g.mapleader = ','
@@ -84,9 +91,7 @@ map('n', '<Tab>', ':BufferNext<CR>', {silent=true})
 map('n', '<s-Tab>', ':BufferPrevious<CR>', {silent=true})
 -- close buffer using <S-q> and <S-q>
 map('n', '<S-q>', ':BufferClose<CR>', {silent=true})
-
--- Commands
-vim.api.nvim_create_user_command('E', 'execute(\'silent! !mkdir -p "$(dirname "<args>")"\') <Bar> e <args>', {nargs = 1})
+map('n', '<leader>d', ':D<CR>', {silent=true,  noremap=true})
 
 require('plugins.barbar')
 require('plugins.galaxyline')
