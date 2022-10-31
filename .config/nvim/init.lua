@@ -92,6 +92,10 @@ map('n', '<s-Tab>', ':BufferPrevious<CR>', {silent=true})
 -- close buffer using <S-q> and <S-q>
 map('n', '<S-q>', ':BufferClose<CR>', {silent=true})
 map('n', '<leader>d', ':D<CR>', {silent=true,  noremap=true})
+-- open Exp using leader and E
+map('n', '<leader>e', ':Exp<CR>', {silent=true,  noremap=true})
+-- close explorer using key
+map('n', '<leader>c', ':bd<CR>', {silent=true,  noremap=true})
 
 require('plugins.barbar')
 require('plugins.galaxyline')
