@@ -6,6 +6,13 @@
     - "~"
     - "~/.config/nvim"
 
+- link:
+    ~/.zshrc: zsh/.zshrc
+    ~/.hushlogin: .hushlogin
+    ~/nodemon.json: nodemon/nodemon.json
+    ~/.config/nvim: .config/nvim
+    ~/.ssh/config: .ssh/config
+    
 - shell:
     # oh my zsh
     - [
@@ -37,9 +44,3 @@
     - git clone https://github.com/lukas-reineke/indent-blankline.nvim.git ~/.config/nvim/pack/lukas-reineke/start/indent-blanklink.nvim
     - git clone https://github.com/glepnir/galaxyline.nvim.git ~/.config/nvim/pack/glepnir/start/galaxyline.nvim
 
-- link:
-    ~/.zshrc: zsh/.zshrc
-    ~/.hushlogin: .hushlogin
-    ~/nodemon.json: nodemon/nodemon.json
-    ~/.config/nvim: .config/nvim
-    ~/.ssh/config: .ssh/config
