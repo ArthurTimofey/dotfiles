@@ -6,6 +6,17 @@
 	<string>C88F9943-0825-480A-9FAC-EC9179649802</string>
 	<key>GlobalKeyMap</key>
 	<dict>
+		<key>0x19-0x20000-0x30</key>
+		<dict>
+			<key>Action</key>
+			<integer>13</integer>
+			<key>Label</key>
+			<string></string>
+			<key>Text</key>
+			<string></string>
+			<key>Version</key>
+			<integer>1</integer>
+		</dict>
 		<key>0x19-0x60000</key>
 		<dict>
 			<key>Action</key>

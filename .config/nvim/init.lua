@@ -47,7 +47,7 @@ vim.g.fzf_layout = {window={width=1, height=0.3, yoffset=1.0}}
 
 -- COC
 vim.cmd [[
-let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-git', 'coc-lua']
+let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-git', 'coc-lua', 'coc-json']
 ]]
 
 vim.o.updatetime=300
