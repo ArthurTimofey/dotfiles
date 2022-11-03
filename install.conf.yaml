@@ -12,7 +12,8 @@
     ~/nodemon.json: nodemon/nodemon.json
     ~/.config/nvim: .config/nvim
     ~/.ssh/config: .ssh/config
-    
+    ~/.ignore: .ignore
+
 - shell:
     # oh my zsh
     - [
@@ -43,4 +44,3 @@
     - git clone https://github.com/nvim-tree/nvim-web-devicons.git ~/.config/nvim/pack/nvim-tree/start/nvim-web-devicons.nvim
     - git clone https://github.com/lukas-reineke/indent-blankline.nvim.git ~/.config/nvim/pack/lukas-reineke/start/indent-blanklink.nvim
     - git clone https://github.com/glepnir/galaxyline.nvim.git ~/.config/nvim/pack/glepnir/start/galaxyline.nvim
-
