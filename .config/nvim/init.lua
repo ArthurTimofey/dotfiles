@@ -80,7 +80,7 @@ map("i", "<C-j>", "copilot#Accept('<CR>')", {noremap = true, silent = true, expr
 vim.api.nvim_create_user_command('E', 'execute(\'silent! !mkdir -p "$(dirname "<args>")"\') <Bar> e <args>', {nargs = 1})
 -- create a command that deletes current file
 vim.api.nvim_create_user_command('D', 'execute(\'silent! !rm -rf %\')', {nargs = 0})
-vim.api.nvim_create_user_command('Cap', 'execute(\'silent! !cap "<args>"\')', {nargs = 1})
+vim.api.nvim_create_user_command('Cap', 'execute(\'!cap "<args>"\')', {nargs = 1})
 
 -- Key Maps
 vim.g.mapleader = ','
