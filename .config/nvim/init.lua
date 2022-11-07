@@ -1,4 +1,8 @@
-local map = vim.keymap.set
+local map = function (type, key, value, opts)
+  local options = { noremap = true }
+  if opts then options = vim.tbl_extend('force', options, opts) end
+  vim.api.nvim_set_keymap(type, key, value, options)
+end
 
 -- Options
 vim.o.background = 'dark'
@@ -69,7 +73,8 @@ map("n", "gr", "<Plug>(coc-references)", {silent = true})
 -- Copilot
 vim.g.copilot_autostart = 1
 vim.g.copilot_no_tab_map = true
-map("i", "<C-j>", "copilot#Accept('\\<CR>')", {noremap = true, silent = true, expr=true })
+map("i", "<C-j>", "<down>", {noremap = true, silent = true})
+map("i", "<C-j>", "copilot#Accept('<CR>')", {noremap = true, silent = true, expr=true })
 
 -- Commands
 vim.api.nvim_create_user_command('E', 'execute(\'silent! !mkdir -p "$(dirname "<args>")"\') <Bar> e <args>', {nargs = 1})
