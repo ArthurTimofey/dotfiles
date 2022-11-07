@@ -73,7 +73,6 @@ map("n", "gr", "<Plug>(coc-references)", {silent = true})
 -- Copilot
 vim.g.copilot_autostart = 1
 vim.g.copilot_no_tab_map = true
-map("i", "<C-j>", "<down>", {noremap = true, silent = true})
 map("i", "<C-j>", "copilot#Accept('<CR>')", {noremap = true, silent = true, expr=true })
 
 -- Commands
@@ -91,9 +90,6 @@ map('i', '<c-s>', '<ESC>:w<CR>')
 map('v', '<c-s>', '<ESC>:w<CR>')
 map('n', '<leader>t', ':tabe | term<CR>')
 map('t', '<Esc>', '(&filetype == "fzf") ? "<Esc>" : "<C-\\><C-n>"', {silent = true, noremap = true, expr = true })
--- Move to previous/next
-map('n', '<Tab>', ':BufferNext<CR>', {silent=true})
-map('n', '<s-Tab>', ':BufferPrevious<CR>', {silent=true})
 -- close buffer using <S-q> and <S-q>
 map('n', '<S-q>', ':BufferClose<CR>', {silent=true})
 map('n', '<leader>d', ':D<CR>', {silent=true,  noremap=true})
@@ -102,5 +98,5 @@ map('n', '<leader>e', ':Exp<CR>', {silent=true,  noremap=true})
 -- close explorer using key
 map('n', '<leader>c', ':bd<CR>', {silent=true,  noremap=true})
 
-require('plugins.barbar')
 require('plugins.galaxyline')
+require('plugins.tabby')

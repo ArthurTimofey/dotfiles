@@ -40,7 +40,7 @@
     - git clone https://github.com/leafgarland/typescript-vim.git ~/.config/nvim/pack/leafgarland/start/typescript-vim
     - git clone https://github.com/styled-components/vim-styled-components.git ~/.config/nvim/pack/styled-components/start/vim-styled-components
     - git clone https://github.com/folke/tokyonight.nvim.git ~/.config/nvim/pack/folke/start/tokyonight.nvim
-    - git clone https://github.com/romgrk/barbar.nvim.git ~/.config/nvim/pack/romgrk/start/barbar.nvim
     - git clone https://github.com/nvim-tree/nvim-web-devicons.git ~/.config/nvim/pack/nvim-tree/start/nvim-web-devicons.nvim
     - git clone https://github.com/lukas-reineke/indent-blankline.nvim.git ~/.config/nvim/pack/lukas-reineke/start/indent-blanklink.nvim
     - git clone https://github.com/glepnir/galaxyline.nvim.git ~/.config/nvim/pack/glepnir/start/galaxyline.nvim
+    - git clone https://github.com/nanozuki/tabby.nvim.git ~/.config/nvim/pack/nanozuki/start/tabby.nvim
