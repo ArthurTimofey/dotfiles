@@ -80,6 +80,7 @@ map("i", "<C-j>", "copilot#Accept('<CR>')", {noremap = true, silent = true, expr
 vim.api.nvim_create_user_command('E', 'execute(\'silent! !mkdir -p "$(dirname "<args>")"\') <Bar> e <args>', {nargs = 1})
 -- create a command that deletes current file
 vim.api.nvim_create_user_command('D', 'execute(\'silent! !rm -rf %\')', {nargs = 0})
+vim.api.nvim_create_user_command('Cap', 'execute(\'silent! !cap "<args>"\')', {nargs = 1})
 
 -- Key Maps
 vim.g.mapleader = ','
@@ -99,7 +100,7 @@ map('n', '<leader>e', ':Exp<CR>', {silent=true,  noremap=true})
 -- close explorer using key
 map('n', '<leader>c', ':bd<CR>', {silent=true,  noremap=true})
 -- use leader g to execute cap command
-map('n', '<leader>g', ':!cap ', {noremap=true})
+map('n', '<leader>g', ':Cap ', {noremap=true})
 
 require('plugins.galaxyline')
 require('plugins.tabby')
