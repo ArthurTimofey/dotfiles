@@ -21,6 +21,7 @@ vim.o.shiftwidth =2
 vim.o.tabstop = 2 
 vim.o.termguicolors = true
 vim.o.shellcmdflag='-ic'
+vim.o.showtabline =2 
 
 -- Window Local Options
 vim.wo.cursorline = true
