@@ -98,6 +98,8 @@ map('n', '<leader>d', ':D<CR>', {silent=true,  noremap=true})
 map('n', '<leader>e', ':Exp<CR>', {silent=true,  noremap=true})
 -- close explorer using key
 map('n', '<leader>c', ':bd<CR>', {silent=true,  noremap=true})
+-- use leader g to execute cap command
+map('n', '<leader>g', ':!cap ', {noremap=true})
 
 require('plugins.galaxyline')
 require('plugins.tabby')
