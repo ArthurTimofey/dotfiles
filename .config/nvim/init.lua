@@ -52,7 +52,7 @@ vim.g.fzf_layout = {window={width=1, height=0.3, yoffset=1.0}}
 
 -- COC
 vim.cmd [[
-let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-git', 'coc-lua', 'coc-json']
+let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-git', 'coc-lua', 'coc-json', 'coc-eslint']
 ]]
 
 vim.o.updatetime=300
@@ -81,6 +81,18 @@ vim.api.nvim_create_user_command('E', 'execute(\'silent! !mkdir -p "$(dirname "<
 -- create a command that deletes current file
 vim.api.nvim_create_user_command('D', 'execute(\'silent! !rm -rf %\')', {nargs = 0})
 vim.api.nvim_create_user_command('Cap', 'execute(\'!cap "<args>"\')', {nargs = 1})
+-- create a command that renames current file
+function _G.rename_file()
+    local old_name = vim.fn.expand('%')
+    local old_name_only = vim.fn.expand('%:t')
+    local path = vim.fn.expand('%:p:h')
+    local new_name = vim.fn.input('Rename "'.. old_name_only .. '" to:: ', '', 'file')
+    if new_name ~= '' then
+        vim.fn.rename(old_name, path .. '/' .. new_name)
+        vim.cmd('edit ' .. new_name)
+    end
+end
+vim.api.nvim_create_user_command('R', 'lua rename_file()', {nargs = 0})
 
 -- Key Maps
 vim.g.mapleader = ','
@@ -101,6 +113,9 @@ map('n', '<leader>e', ':Exp<CR>', {silent=true,  noremap=true})
 map('n', '<leader>c', ':bd<CR>', {silent=true,  noremap=true})
 -- use leader g to execute cap command
 map('n', '<leader>g', ':Cap ', {noremap=true})
+-- use leader r to rename current file
+map('n', '<leader>r', ':R <CR>', {noremap=true})
+
 
 require('plugins.galaxyline')
 require('plugins.tabby')
