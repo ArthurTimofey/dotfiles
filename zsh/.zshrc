@@ -25,7 +25,8 @@ rtouch () {
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
+
 # pnpm
-export PNPM_HOME="/Users/arturstimofejevs/Library/pnpm"
+export PNPM_HOME="/Users/arturs/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
