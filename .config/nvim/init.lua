@@ -23,6 +23,8 @@ vim.o.termguicolors = true
 vim.o.shellcmdflag='-ic'
 vim.o.showtabline =2 
 
+-- epik
+
 -- Window Local Options
 vim.wo.cursorline = true
 
@@ -52,7 +54,7 @@ vim.g.fzf_layout = {window={width=1, height=0.3, yoffset=1.0}}
 
 -- COC
 vim.cmd [[
-let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-git', 'coc-lua', 'coc-json', 'coc-eslint']
+let g:coc_global_extensions = ['coc-prettier', 'coc-tsserver', 'coc-git', 'coc-lua', 'coc-json', 'coc-eslint', 'coc-spell-checker']
 ]]
 
 vim.o.updatetime=300
@@ -93,6 +95,7 @@ function _G.rename_file()
     end
 end
 vim.api.nvim_create_user_command('R', 'lua rename_file()', {nargs = 0})
+
 
 -- Key Maps
 vim.g.mapleader = ','
