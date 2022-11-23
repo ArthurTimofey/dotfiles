@@ -118,6 +118,7 @@ map('n', '<leader>c', ':bd<CR>', {silent=true,  noremap=true})
 map('n', '<leader>g', ':Cap ', {noremap=true})
 -- use leader r to rename current file
 map('n', '<leader>r', ':R <CR>', {noremap=true})
+map('n', '<leader>d',  ':CocCommand cSpell.addWordToUserDictionary<CR>', {noremap=true})
 
 
 require('plugins.galaxyline')
