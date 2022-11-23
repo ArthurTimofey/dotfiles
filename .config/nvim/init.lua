@@ -119,6 +119,16 @@ map('n', '<leader>g', ':Cap ', {noremap=true})
 -- use leader r to rename current file
 map('n', '<leader>r', ':R <CR>', {noremap=true})
 map('n', '<leader>d',  ':CocCommand cSpell.addWordToUserDictionary<CR>', {noremap=true})
+-- select first tab shortcut
+map('n', '<leader>1', '1gt', {noremap=true})
+-- select second tab shortcut
+map('n', '<leader>2', '2gt', {noremap=true})
+-- select third tab shortcut
+map('n', '<leader>3', '3gt', {noremap=true})
+-- select fourth tab shortcut
+map('n', '<leader>4', '4gt', {noremap=true})
+
+
 
 
 require('plugins.galaxyline')
