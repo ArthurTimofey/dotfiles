@@ -5,11 +5,17 @@
   "coc.preferences.formatOnSaveFiletypes": ["*"],
   "rust-analyzer.enable": true,
   "cSpell.userWords": [
+    "arturs",
+    "coldstart",
     "pnpm",
     "sixtyno",
+    "tanstack",
+    "timofejevs",
+    "tsbuildinfo",
     "vite",
     "vitejs",
     "vitepress",
-    "vitest"
+    "vitest",
+    "vods"
   ]
 }

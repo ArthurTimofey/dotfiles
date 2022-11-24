@@ -105,7 +105,18 @@ map('n', '<leader>a', ':luafile ~/.config/nvim/init.lua<CR>') -- refresh neovim
 map('n', '<c-s>', ':w<CR>')
 map('i', '<c-s>', '<ESC>:w<CR>')
 map('v', '<c-s>', '<ESC>:w<CR>')
-map('n', '<leader>t', ':tabe | term<CR>')
+
+function _G.open_terminal()
+  -- open terminal in a new tab
+  vim.cmd('tabnew | terminal')
+
+
+end
+
+vim.api.nvim_create_user_command('T', 'lua open_terminal()', {nargs = 0})
+
+map('n', '<leader>t', ':T<CR>')
+
 map('t', '<Esc>', '(&filetype == "fzf") ? "<Esc>" : "<C-\\><C-n>"', {silent = true, noremap = true, expr = true })
 -- close buffer using <S-q> and <S-q>
 map('n', '<S-q>', ':BufferClose<CR>', {silent=true})
@@ -118,7 +129,7 @@ map('n', '<leader>c', ':bd<CR>', {silent=true,  noremap=true})
 map('n', '<leader>g', ':Cap ', {noremap=true})
 -- use leader r to rename current file
 map('n', '<leader>r', ':R <CR>', {noremap=true})
-map('n', '<leader>d',  ':CocCommand cSpell.addWordToUserDictionary<CR>', {noremap=true})
+map('n', '<leader>s',  ':CocCommand cSpell.addWordToUserDictionary<CR>', {noremap=true})
 -- select first tab shortcut
 map('n', '<leader>1', '1gt', {noremap=true})
 -- select second tab shortcut
@@ -127,9 +138,6 @@ map('n', '<leader>2', '2gt', {noremap=true})
 map('n', '<leader>3', '3gt', {noremap=true})
 -- select fourth tab shortcut
 map('n', '<leader>4', '4gt', {noremap=true})
-
-
-
 
 require('plugins.galaxyline')
 require('plugins.tabby')
