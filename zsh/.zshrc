@@ -1,6 +1,6 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-ZSH_THEME="spaceship"
+source $ZSH/oh-my-zsh.sh
 
 source $HOME/.dotfiles/zsh/.zshrc.aliases
 source $HOME/.dotfiles/zsh/.zshrc.exports
@@ -15,13 +15,6 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
-source $ZSH/oh-my-zsh.sh
-
-rtouch () {
-    mkdir -p "$(dirname "$1")" && touch "$1"
-}
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
@@ -30,3 +23,5 @@ export PATH=/opt/homebrew/bin:$PATH
 export PNPM_HOME="/Users/$USER/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+eval "$(starship init zsh)"
