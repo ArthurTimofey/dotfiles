@@ -5,3 +5,18 @@ util.map('n', '<c-p>', builtin.find_files)
 util.map('n', '<Leader><Leader>', builtin.oldfiles)
 util.map('n', '<Leader>fg', builtin.live_grep)
 util.map('n', '<Leader>fh', builtin.help_tags)
+
+local telescope = require('telescope')
+
+telescope.setup {
+
+pickers = {
+
+find_files = {
+
+hidden = true
+
+}
+
+}
+}

@@ -1,6 +1,5 @@
 export ZSH="$HOME/.oh-my-zsh"
 
-source $ZSH/oh-my-zsh.sh
 
 source $HOME/.dotfiles/zsh/.zshrc.aliases
 source $HOME/.dotfiles/zsh/.zshrc.exports
@@ -15,6 +14,8 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
+
+source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
 export PATH=/opt/homebrew/bin:$PATH
