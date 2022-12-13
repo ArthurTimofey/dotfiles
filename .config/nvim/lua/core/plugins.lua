@@ -1,10 +1,10 @@
 local ensure_packer = function()
   local fn = vim.fn
   local home_path = os.getenv("HOME")
-  local install_path = home_path..'/.config/nvim/pack/packer/start/packer.nvim'
+  local install_path = home_path .. '/.config/nvim/pack/packer/start/packer.nvim'
 
   if fn.empty(fn.glob(install_path)) > 0 then
-    fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
+    fn.system({ 'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path })
     vim.cmd [[packadd packer.nvim]]
     return true
   end
@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope.nvim',
     tag = '0.1.0',
     requires = { { 'nvim-lua/plenary.nvim' } }
-      }
+  }
   use {
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
@@ -34,7 +34,7 @@ return require('packer').startup(function(use)
     'saadparwaiz1/cmp_luasnip',
     'L3MON4D3/LuaSnip',
     'jose-elias-alvarez/null-ls.nvim',
-    'MunifTanjim/prettier.nvim'
+    'MunifTanjim/prettier.nvim',
   }
 
   -- Automatically set up your configuration after cloning packer.nvim
