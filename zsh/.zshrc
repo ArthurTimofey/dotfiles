@@ -15,6 +15,7 @@ plugins=(
     zsh-syntax-highlighting
 )
 
+ZSH_THEME="spaceship"
 source $ZSH/oh-my-zsh.sh
 
 export PATH="$HOME/.yarn/bin:$HOME/.config/yarn/global/node_modules/.bin:$PATH"
@@ -25,4 +26,3 @@ export PNPM_HOME="/Users/$USER/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-eval "$(starship init zsh)"

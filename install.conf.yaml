@@ -6,6 +6,30 @@
     - "~"
     - "~/.config/nvim"
 
+- shell:
+    # clean
+    - [
+        "rm -rf ~/.oh-my-zsh & rm -rf ~/.config/nvim/pack",
+        "🧹 cleaning",
+      ]
+    # ZSH
+    - [
+        "brew list zsh && brew reinstall zsh || brew install zsh",
+        "🐛 installing zsh"
+      ]
+    # oh-my-zsh
+    - [
+        "sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" \"\" --unattended --keep-zshrc",
+        "🐛 installing oh-my-zsh"
+      ]
+    # oh-my-zsh plugins
+    - [
+        "git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions 
+        & git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting 
+        & git clone https://github.com/spaceship-prompt/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt --depth=1",
+        "🐛 installing oh-my-zsh plugins and themes"
+      ]
+
 - link:
     ~/.zshrc: zsh/.zshrc
     ~/.hushlogin: .hushlogin
@@ -13,18 +37,3 @@
     ~/.config/nvim: .config/nvim
     ~/.ssh/config: .ssh/config
     ~/.ignore: .ignore
-
-- shell:
-    # oh my zsh
-    - [
-        "rm -rf ~/.oh-my-zsh & rm -rf ~/.config/nvim/pack & rm -rf ~/.config/coc/extensions",
-        "cleaning",
-      ]
-    - sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
-    # oh my zsh plugins & themes
-    # - zsh-autosuggestions
-    - git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-    # - zsh-syntax-highlighting
-    - git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-    # - spaceship theme
-    - git clone https://github.com/spaceship-prompt/spaceship-prompt.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/themes/spaceship-prompt --depth=1

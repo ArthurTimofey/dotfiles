@@ -4,9 +4,9 @@ require("lualine").setup {
     theme = "gruvbox"
   },
   sections = {
-    lualine_a = {
+    lualine_a = {{
       "filename",
-      path = {"1"}
-    }
+      path = 1
+    }}
   }
 }
