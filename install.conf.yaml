@@ -47,3 +47,4 @@
     ~/.config/nvim: .config/nvim
     ~/.ssh/config: .ssh/config
     ~/.ignore: .ignore
+    ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme
