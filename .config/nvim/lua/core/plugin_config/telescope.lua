@@ -16,7 +16,9 @@ find_files = {
 
 hidden = true
 
-}
+},
+
+find_ignore_pattenrs = {"node_modules", "dotbot"}
 
 }
 }

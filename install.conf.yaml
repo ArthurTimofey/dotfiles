@@ -17,6 +17,16 @@
         "brew list zsh && brew reinstall zsh || brew install zsh",
         "🐛 installing zsh"
       ]
+    # RIPGREP
+    - [
+        "brew list ripgrep && brew reinstall ripgrep || brew install ripgrep",
+        "🐛 installing ripgrep"
+      ]
+    # FD 
+    - [
+        "brew list fd && brew reinstall fd || brew install fd",
+        "🐛 installing fd"
+      ]
     # oh-my-zsh
     - [
         "sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" \"\" --unattended --keep-zshrc",

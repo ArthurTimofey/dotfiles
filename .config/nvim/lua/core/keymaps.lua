@@ -35,6 +35,7 @@ vim.api.nvim_command('syntax on')
 vim.api.nvim_command('autocmd BufEnter *.{js,jsx,ts,tsx} :syntax sync fromstart')
 vim.api.nvim_command('autocmd BufLeave *.{js,jsx,ts,tsx} :syntax sync clear')
 vim.api.nvim_command('autocmd BufNewFile,BufRead *.tsx,*.jsx set filetype=typescriptreact')
+vim.cmd('syntax enable')
 
 -- nvim custom commands
 vim.api.nvim_create_user_command('Cap', 'execute(\'!cap "<args>"\')', {nargs = 1})
