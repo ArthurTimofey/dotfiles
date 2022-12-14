@@ -3,41 +3,46 @@
       relink: true
 
 - clean:
-    - "~"
-    - "~/.config/nvim"
+    - '~'
+    - '~/.config/nvim'
 
 - shell:
     # clean
-    - [
-        "rm -rf ~/.oh-my-zsh & rm -rf ~/.config/nvim/pack",
-        "🧹 cleaning",
-      ]
+    - ['rm -rf ~/.oh-my-zsh & rm -rf ~/.config/nvim/pack', '🧹 cleaning']
     # ZSH
-    - [
-        "brew list zsh && brew reinstall zsh || brew install zsh",
-        "🐛 installing zsh"
-      ]
+    - ['brew list zsh && brew reinstall zsh || brew install zsh', '🐛 installing zsh']
     # RIPGREP
+    - ['brew list ripgrep && brew reinstall ripgrep || brew install ripgrep', '🐛 installing ripgrep']
+    # FD
+    - ['brew list fd && brew reinstall fd || brew install fd', '🐛 installing fd']
+    # PrettierD
     - [
-        "brew list ripgrep && brew reinstall ripgrep || brew install ripgrep",
-        "🐛 installing ripgrep"
+        'brew list fsouza/prettierd/prettierd && brew reinstall fsouza/prettierd/prettierd || brew install fsouza/prettierd/prettierd',
+        '🐛 installing prettierd',
       ]
-    # FD 
-    - [
-        "brew list fd && brew reinstall fd || brew install fd",
-        "🐛 installing fd"
-      ]
+    # eslintD
+    - ['pnpm add -g eslint_d', '🐛 installing eslint_d']
     # oh-my-zsh
     - [
-        "sh -c \"$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)\" \"\" --unattended --keep-zshrc",
-        "🐛 installing oh-my-zsh"
+        'sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc',
+        '🐛 installing oh-my-zsh',
       ]
     # oh-my-zsh plugins
     - [
-        "git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions 
-        & git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting 
-        & git clone https://github.com/spaceship-prompt/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt --depth=1",
-        "🐛 installing oh-my-zsh plugins and themes"
+        'git clone https://github.com/zsh-users/zsh-autosuggestions ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions
+        & git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+        & git clone https://github.com/spaceship-prompt/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt --depth=1',
+        '🐛 installing oh-my-zsh plugins and themes',
+      ]
+    # Github Copilot
+    - [
+        'git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim',
+        '🐛 installing github copilot'
+      ]
+    # CMake
+    - [
+        'brew list cmake && brew reinstall cmake || brew install cmake',
+        '🐛 installing CMake'
       ]
 
 - link:

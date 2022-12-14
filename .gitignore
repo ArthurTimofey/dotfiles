@@ -1,3 +1,3 @@
-.config/nvim/pack
-.config/nvim/plugin
+.config/*/pack
+.config/*/plugin
 .DS_Store
