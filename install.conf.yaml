@@ -37,13 +37,12 @@
     # Github Copilot
     - [
         'git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim',
-        '🐛 installing github copilot'
+        '🐛 installing github copilot',
       ]
     # CMake
-    - [
-        'brew list cmake && brew reinstall cmake || brew install cmake',
-        '🐛 installing CMake'
-      ]
+    - ['brew list cmake && brew reinstall cmake || brew install cmake', '🐛 installing CMake']
+    # Stylua
+    - ['brew list stylua && brew reinstall stylua || brew install stylua', '🐛 installing stylua']
 
 - link:
     ~/.zshrc: zsh/.zshrc

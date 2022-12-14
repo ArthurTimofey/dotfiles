@@ -18,12 +18,11 @@ vim.o.tabstop = 2
 vim.o.termguicolors = true
 vim.o.shellcmdflag = '-ic'
 vim.o.showtabline = 2
-vim.wo.cursorline = true
 
 -- show spaces and tabs as characters use a fat dot for spaces
 -- and dash for tabs
-vim.o.list = true
-vim.o.listchars = 'tab:▸ ,trail:·,nbsp:␣,extends:❯,precedes:❮'
+-- vim.o.list = true
+-- vim.o.listchars = 'tab:▸ ,trail:·,nbsp:␣,extends:❯,precedes:❮'
 
 -- spaces and tabs
 vim.opt.tabstop = 2

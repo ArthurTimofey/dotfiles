@@ -18,6 +18,11 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
   use "nvim-lua/plenary.nvim"
   use 'nvim-tree/nvim-web-devicons'
+  use  'lukas-reineke/indent-blankline.nvim'
+  use {
+	"windwp/nvim-autopairs",
+    config = function() require("nvim-autopairs").setup {} end
+  }
 
   -- Themes
   use 'ellisonleao/gruvbox.nvim'
