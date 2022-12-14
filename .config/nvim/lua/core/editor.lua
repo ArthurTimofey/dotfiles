@@ -30,3 +30,6 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
+
+-- use tabs for indenting
+vim.opt.smarttab = true

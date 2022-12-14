@@ -27,6 +27,9 @@ return require('packer').startup(function(use)
   use 'nvim-tree/nvim-tree.lua'
   use 'nvim-treesitter/nvim-treesitter'
 
+  -- dashboard
+  use 'glepnir/dashboard-nvim'
+
   -- Mason
   use {
     "williamboman/mason.nvim",
