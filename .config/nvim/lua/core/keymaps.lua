@@ -5,6 +5,8 @@ map('n', '<leader>h', ':nohlsearch<CR>')
 map('n', '<c-s>', ':w<CR>')
 map('i', '<c-s>', '<ESC>:w<CR>')
 map('v', '<c-s>', '<ESC>:w<CR>')
+-- shift c s to save without triggering buf
+map('n', '<leader>s', ':noautocmd w<CR>')
 map('n', '<leader>a', ':luafile ~/.config/nvim/init.lua<CR>')
 map('n', '<leader>1', '1gt')
 map('n', '<leader>2', '2gt')
