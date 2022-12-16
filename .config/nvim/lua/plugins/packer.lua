@@ -15,78 +15,36 @@ local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
   -- Misc
-  use 'wbthomason/packer.nvim'
-  use "nvim-lua/plenary.nvim"
-  use 'nvim-tree/nvim-web-devicons'
-  use  'lukas-reineke/indent-blankline.nvim'
   use {
-	"windwp/nvim-autopairs",
-    config = function() require("nvim-autopairs").setup {} end
-  }
-
-  -- comments
-  use {
+    'wbthomason/packer.nvim',
+    'nvim-lua/plenary.nvim',
+    'nvim-tree/nvim-web-devicons',
+    'lukas-reineke/indent-blankline.nvim',
+    'windwp/nvim-autopairs',
     'terrortylor/nvim-comment',
-    config = function() require('nvim_comment').setup() end
-  }
-
-  -- nvim cmp
-  use {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/nvim-cmp',
     'L3MON4D3/LuaSnip',
-  }
-
-  -- lualine
-  use {
-   'nvim-lualine/lualine.nvim',
-    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-  }
-
-  -- Copilot
-  use 'github/copilot.vim'
-
-  -- Themes
-  use 'ellisonleao/gruvbox.nvim'
-  use 'navarasu/onedark.nvim'
-
-  -- Tree Sitter
-  use 'nvim-tree/nvim-tree.lua'
-  use 'nvim-treesitter/nvim-treesitter'
-
-  -- dashboard
-  use 'glepnir/dashboard-nvim'
-
-  -- Mason
-  use {
+    'nvim-lualine/lualine.nvim',
+    'github/copilot.vim',
+    'nvim-tree/nvim-tree.lua',
+    'nvim-treesitter/nvim-treesitter',
+    'glepnir/dashboard-nvim',
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
-  }
-
-  -- Telescope
-  use {
-    'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    requires = { { 'nvim-lua/plenary.nvim' } }
-  }
-  use { 'nvim-telescope/telescope-fzf-native.nvim',
-    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-
-  -- null-ls
-  use {
     "jose-elias-alvarez/null-ls.nvim",
-    requires = {
-      "neovim/nvim-lspconfig",
-      "nvim-lua/plenary.nvim",
-    },
-  }
+    'lewis6991/gitsigns.nvim',
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
+    'nvim-telescope/telescope.nvim',
 
-  -- prettier
-  use('MunifTanjim/prettier.nvim')
-  -- eslint
-  use('MunifTanjim/eslint.nvim')
+    -- themes
+    'ellisonleao/gruvbox.nvim',
+    'navarasu/onedark.nvim',
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

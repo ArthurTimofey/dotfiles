@@ -11,8 +11,9 @@ require('plugins.config.null-ls')
 require('plugins.config.treesitter')
 require('plugins.config.nvim-tree')
 require('plugins.config.dashboard')
-require('plugins.config.indent_blankline')
+require('plugins.config.indent-blankline')
 require('plugins.config.lualine')
 require('plugins.config.cmp')
-
-
+require('plugins.config.nvim-autopairs')
+require('plugins.config.nvim-comment')
+require('plugins.config.gitsigns')

@@ -8,7 +8,6 @@ require("mason-lspconfig").setup({
   ensure_installed = lsp_servers
 })
 
-
 local opts = { noremap = true, silent = true }
 map('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
 map('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
@@ -19,20 +18,10 @@ lsp.sumneko_lua.setup({
   settings = {
     Lua = {
       format = {
-         enable = false
-      },
-      runtime = {
-        version = "LuaJIT",
-        path = vim.split(package.path, ";"),
+        enable = true
       },
       diagnostics = {
         globals = { "vim" },
-      },
-      workspace = {
-        library = {
-          [vim.fn.expand("$VIMRUNTIME/lua")] = true,
-          [vim.fn.expand("$VIMRUNTIME/lua/vim/lsp")] = true,
-        },
       },
     },
   },
