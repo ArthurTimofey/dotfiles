@@ -16,6 +16,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
   -- Misc
   use {
+    -- Plugins
     'wbthomason/packer.nvim',
     'nvim-lua/plenary.nvim',
     'nvim-tree/nvim-web-devicons',
@@ -40,7 +41,7 @@ return require('packer').startup(function(use)
     'nvim-telescope/telescope-fzf-native.nvim',
     run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
     'nvim-telescope/telescope.nvim',
-
+    'onsails/lspkind-nvim',
     -- themes
     'ellisonleao/gruvbox.nvim',
     'navarasu/onedark.nvim',
