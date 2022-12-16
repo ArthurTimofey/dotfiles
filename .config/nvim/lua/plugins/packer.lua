@@ -24,12 +24,19 @@ return require('packer').startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
 
+  -- comments
+  use {
+    'terrortylor/nvim-comment',
+    config = function() require('nvim_comment').setup() end
+  }
+
   -- nvim cmp
   use {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/nvim-cmp',
+    'L3MON4D3/LuaSnip',
   }
 
   -- lualine

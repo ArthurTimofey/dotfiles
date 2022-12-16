@@ -20,7 +20,7 @@ vim.o.shellcmdflag = '-ic'
 vim.o.showtabline = 2
 
 -- auto refresh buffers when files change
-vim.cmd('autocmd FocusGained,BufEnter * checktime')
+--vim.cmd('autocmd FocusGained,BufEnter * checktime')
 
 -- show spaces and tabs as characters use a fat dot for spaces
 -- and dash for tabs
@@ -35,3 +35,4 @@ vim.opt.expandtab = true
 
 -- use tabs for indenting
 vim.opt.smarttab = true
+

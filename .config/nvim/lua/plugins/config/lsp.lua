@@ -18,6 +18,9 @@ map('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 lsp.sumneko_lua.setup({
   settings = {
     Lua = {
+      format = {
+         enable = false
+      },
       runtime = {
         version = "LuaJIT",
         path = vim.split(package.path, ";"),

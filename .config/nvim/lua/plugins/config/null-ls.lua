@@ -1,27 +1,37 @@
 local null_ls = require("null-ls")
-local augroup_name = "CosmicNvimLspFormat"
-local group = vim.api.nvim_create_augroup(augroup_name, { clear = true })
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 
 vim.api.nvim_create_autocmd("BufWritePre", {
-	callback = function()
-		vim.lsp.buf.format({
-			filter = function(client)
-				-- apply whatever logic you want (in this example, we'll only use null-ls)
-				return client.name == "null-ls"
-			end,
-		})
-	end,
-	group = group,
-	nested = true,
+  callback = function()
+    vim.lsp.buf.format({
+      filter = function(client)
+        return client.name == "null-ls"
+      end,
+    })
+  end,
+  group = augroup,
+  nested = true,
 })
 
 null_ls.setup({
-	debug = true,
-	sources = {
-		null_ls.builtins.code_actions.eslint_d,
-		null_ls.builtins.diagnostics.eslint_d,
-    null_ls.builtins.formatting.markdown_toc,
-		null_ls.builtins.formatting.prettierd,
-		null_ls.builtins.formatting.stylua,
-	},
+  debug = true,
+-- on_attach = function(client, bufnr)
+--         if client.supports_method("textDocument/formatting") then
+--             vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+--             vim.api.nvim_create_autocmd("BufWritePre", {
+--                 group = augroup,
+--                 buffer = bufnr,
+--                 callback = function()
+--                     -- on 0.8, you should use vim.lsp.buf.format({ bufnr = bufnr }) instead
+--                     vim.lsp.buf.formatting_sync()
+--                 end,
+--             })
+--         end
+--     end,
+  sources = {
+    null_ls.builtins.code_actions.eslint_d,
+    null_ls.builtins.diagnostics.eslint_d,
+    null_ls.builtins.formatting.prettierd,
+    null_ls.builtins.formatting.stylua,
+  },
 })
