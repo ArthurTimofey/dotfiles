@@ -34,11 +34,6 @@
         & git clone https://github.com/spaceship-prompt/spaceship-prompt.git ~/.oh-my-zsh/custom/themes/spaceship-prompt --depth=1',
         '🐛 installing oh-my-zsh plugins and themes',
       ]
-    # Github Copilot
-    - [
-        'git clone https://github.com/github/copilot.vim.git ~/.config/nvim/pack/github/start/copilot.vim',
-        '🐛 installing github copilot',
-      ]
     # CMake
     - ['brew list cmake && brew reinstall cmake || brew install cmake', '🐛 installing CMake']
     # Stylua

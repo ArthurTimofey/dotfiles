@@ -19,6 +19,9 @@ vim.o.termguicolors = true
 vim.o.shellcmdflag = '-ic'
 vim.o.showtabline = 2
 
+-- auto refresh buffers when files change
+vim.cmd('autocmd FocusGained,BufEnter * checktime')
+
 -- show spaces and tabs as characters use a fat dot for spaces
 -- and dash for tabs
 -- vim.o.list = true

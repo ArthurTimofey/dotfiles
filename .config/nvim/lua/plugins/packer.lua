@@ -24,6 +24,23 @@ return require('packer').startup(function(use)
     config = function() require("nvim-autopairs").setup {} end
   }
 
+  -- nvim cmp
+  use {
+    'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-buffer',
+    'hrsh7th/cmp-path',
+    'hrsh7th/nvim-cmp',
+  }
+
+  -- lualine
+  use {
+   'nvim-lualine/lualine.nvim',
+    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+
+  -- Copilot
+  use 'github/copilot.vim'
+
   -- Themes
   use 'ellisonleao/gruvbox.nvim'
   use 'navarasu/onedark.nvim'
