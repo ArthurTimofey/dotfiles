@@ -37,7 +37,7 @@ require 'bufferline'.setup {
   exclude_name = { 'package.json' },
 
   -- Hide inactive buffers and file extensions. Other options are `alternate`, `current`, and `visible`.
-  hide = { extensions = true, inactive = true },
+  hide = { extensions = true, inactive = false },
 
   -- Disable highlighting alternate buffers
   highlight_alternate = false,

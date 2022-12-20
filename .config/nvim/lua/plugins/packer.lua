@@ -42,7 +42,9 @@ return require('packer').startup(function(use)
     run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build',
     'nvim-telescope/telescope.nvim',
     'onsails/lspkind-nvim',
-    'romgrk/barbar.nvim',
+    -- 'romgrk/barbar.nvim',
+    'nanozuki/tabby.nvim',
+    'norcalli/nvim-colorizer.lua',
     -- themes
     'ellisonleao/gruvbox.nvim',
     'navarasu/onedark.nvim',
