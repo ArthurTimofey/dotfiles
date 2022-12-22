@@ -20,3 +20,9 @@ map('n', '<leader>qa', ':qa<CR>')
 -- use leader c to comment line
 map('v', '<leader>c', ':CommentToggle<CR>')
 map('n', '<leader>c', ':CommentToggle<CR>')
+
+-- copy relative path to clipboard
+map('n', '<leader>cp', ':let @+=expand("%:p")<CR>')
+
+
+
