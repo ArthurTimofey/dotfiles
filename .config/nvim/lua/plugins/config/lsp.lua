@@ -18,7 +18,7 @@ lsp.sumneko_lua.setup({
   settings = {
     Lua = {
       format = {
-        enable = true
+        enable = false
       },
       diagnostics = {
         globals = { "vim" },
@@ -29,6 +29,9 @@ lsp.sumneko_lua.setup({
 
 lsp.tsserver.setup {
   on_attach = function(client)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
     client.server_capabilities.document_formatting = false
   end,
+  format = false
 }
