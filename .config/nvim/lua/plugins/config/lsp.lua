@@ -14,7 +14,14 @@ map('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
 map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
 map('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 
+local on_attach = function (client)
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+    client.server_capabilities.document_formatting = false
+end
+
 lsp.sumneko_lua.setup({
+  on_attach = on_attach,
   settings = {
     Lua = {
       format = {
@@ -28,10 +35,6 @@ lsp.sumneko_lua.setup({
 })
 
 lsp.tsserver.setup {
-  on_attach = function(client)
-    client.server_capabilities.documentFormattingProvider = false
-    client.server_capabilities.documentRangeFormattingProvider = false
-    client.server_capabilities.document_formatting = false
-  end,
+  on_attach = on_attach,
   format = false
 }

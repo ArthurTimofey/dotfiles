@@ -24,5 +24,4 @@ map('n', '<leader>c', ':CommentToggle<CR>')
 -- copy relative path to clipboard
 map('n', '<leader>cp', ':let @+=expand("%:p")<CR>')
 
-
-
+map('x', 'p', "\"_DP")
