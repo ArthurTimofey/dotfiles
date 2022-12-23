@@ -1,8 +1,8 @@
 local icons = {
-	warn = '⚠️',
-	info = 'ℹ️',
-	error = '❌',
-	hint = '💡',
+	warn = '!',
+	info = 'I',
+	error = 'X',
+	hint = '?',
 	debug = '🐛',
 }
 
@@ -26,24 +26,28 @@ local function format(diagnostic)
 end
 
 vim.diagnostic.config {
+	-- disable inline Diagnostics
 	underline = true,
-	signs = true,
-	update_in_insert = false,
-	severity_sort = true,
-	float = {
-		focusable = false,
-		header = { icons.debug .. ' Diagnostics:', 'Normal' },
-		scope = 'line',
-		source = false,
-		format = format,
-	},
-	virtual_text = {
-		prefix = '🧐',
-		spacing = 2,
-		source = false,
-		severity = {
-			min = vim.diagnostic.severity.HINT,
-		},
-		format = format,
-	},
+	virtual_text = false,
 }
+
+vim.o.updatetime = 250
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
+
+vim.api.nvim_create_autocmd('CursorHold', {
+	callback = function()
+		local opts = {
+			header = { icons.debug .. ' Diagnostics:', 'Normal' },
+			-- align header
+			focusable = false,
+			close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
+			border = 'rounded',
+			source = false,
+			prefix = ' ',
+			scope = 'cursor',
+			format = format,
+		}
+		vim.diagnostic.open_float(nil, opts)
+	end,
+})
