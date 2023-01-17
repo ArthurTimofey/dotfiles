@@ -10,7 +10,6 @@ local lsp_servers = {
 	'taplo',
 	'svelte',
 	'rust_analyzer',
-	'codelldb',
 	'sumneko_lua',
 }
 
@@ -33,7 +32,23 @@ end
 
 vim.lsp.set_log_level 'debug'
 
-lsp.rust_analyzer.setup {}
+lsp.rust_analyzer.setup {
+	on_attach = on_attach,
+	settings = {
+		['rust-analyzer'] = {
+			assist = {
+				importGranularity = 'module',
+				importPrefix = 'by_self',
+			},
+			cargo = {
+				loadOutDirsFromCheck = true,
+			},
+			procMacro = {
+				enable = true,
+			},
+		},
+	},
+}
 
 lsp.sumneko_lua.setup {
 	on_attach = on_attach,
