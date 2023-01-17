@@ -10,6 +10,7 @@ local lsp_servers = {
 	'taplo',
 	'svelte',
 	'rust_analyzer',
+	'codelldb',
 	'sumneko_lua',
 }
 
@@ -29,6 +30,10 @@ local on_attach = function(client)
 	client.server_capabilities.documentRangeFormattingProvider = false
 	client.server_capabilities.document_formatting = false
 end
+
+vim.lsp.set_log_level 'debug'
+
+lsp.rust_analyzer.setup {}
 
 lsp.sumneko_lua.setup {
 	on_attach = on_attach,

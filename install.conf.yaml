@@ -38,6 +38,7 @@
     - ['brew list cmake && brew reinstall cmake || brew install cmake', '🐛 installing CMake']
     # Stylua
     - ['brew list stylua && brew reinstall stylua || brew install stylua', '🐛 installing stylua']
+    - ['brew list rust-analyzer && brew reinstall rust-analyzer || brew install rust-analyzer', '🐛 installing rust-analyzer']
 
 - link:
     ~/.zshrc: zsh/.zshrc

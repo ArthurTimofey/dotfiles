@@ -25,3 +25,8 @@ map('n', '<leader>c', ':CommentToggle<CR>')
 map('n', '<leader>cp', ':let @+=expand("%:p")<CR>')
 
 -- map('x', 'p', '"_DP')
+
+-- FloaTerm configuration
+map('n', '<leader>tt', ':FloatermNew<CR> ')
+map('n', '<leader>t', ':FloatermToggle<CR>')
+map('t', '<Esc>', '<C-\\><C-n>:q<CR>')
