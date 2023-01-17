@@ -20,4 +20,5 @@ require 'plugins.config.gitsigns'
 require 'plugins.config.tabby'
 require 'plugins.config.colorizer'
 require 'plugins.config.diagnostics'
+require 'plugins.config.auto-session'
 -- require('plugins.config.barbar')

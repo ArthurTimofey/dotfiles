@@ -4,5 +4,5 @@ package-lock.json
 .vim
 
 # .dotfiles
-dotbot/*
+dotbot/**
 node_modules

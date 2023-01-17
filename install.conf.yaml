@@ -43,7 +43,8 @@
     ~/.zshrc: zsh/.zshrc
     ~/.hushlogin: .hushlogin
     ~/nodemon.json: nodemon/nodemon.json
-    ~/.config/nvim: .config/nvim
+    ~/.config/nvim/init.lua: .config/nvim/init.lua
+    ~/.config/nvim/lua: .config/nvim/lua
     ~/.ssh/config: .ssh/config
     ~/.ignore: .ignore
     ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme

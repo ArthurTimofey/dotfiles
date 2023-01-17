@@ -1,4 +1,4 @@
-local map = require('utils.keymap')
+local map = require 'utils.keymap'
 
 -- key maps
 map('n', '<leader>h', ':nohlsearch<CR>')
@@ -24,4 +24,4 @@ map('n', '<leader>c', ':CommentToggle<CR>')
 -- copy relative path to clipboard
 map('n', '<leader>cp', ':let @+=expand("%:p")<CR>')
 
-map('x', 'p', "\"_DP")
+map('x', 'p', '"_DP')
