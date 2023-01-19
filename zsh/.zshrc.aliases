@@ -14,6 +14,7 @@ alias yarn-clean="rm -rf node_modules && rm -rf yarn.lock && yarn"
 
 
 cap() {
+    
     # if no arguments are passed, print error message and exit
     if [ $# -eq 0 ]; then
         echo "Please provide commit message"
@@ -21,11 +22,16 @@ cap() {
     fi
     git add .
     git commit -m "$1"
-    git push
+
+    # if flag -no-push or -np is passed, do not push 
+    if [ "$2" != "-no-push" ] && [ "$2" != "-np" ]; then
+        git push
+    fi
 }
 
 ffd() {
     # find folder and delete
     find . -name "$1" -type d -exec rm -rf {} \;
 }
+
 
