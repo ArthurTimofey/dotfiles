@@ -17,16 +17,16 @@ end
 
 null_ls.setup {
 	on_attach = on_attach,
+	timeout = 1000,
 	sources = {
 		null_ls.builtins.code_actions.eslint_d,
 		null_ls.builtins.diagnostics.eslint_d,
-		null_ls.builtins.formatting.eslint_d,
 		null_ls.builtins.formatting.prettierd.with {
 			env = {
 				PRETTIERD_LOCAL_PRETTIER_ONLY = 1,
 			},
 		},
 		null_ls.builtins.formatting.stylua,
-		null_ls.builtins.formatting.rustfmt,
+		-- null_ls.builtins.formatting.rustfmt,
 	},
 }
