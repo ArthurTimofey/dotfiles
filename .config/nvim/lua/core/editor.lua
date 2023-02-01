@@ -37,3 +37,5 @@ vim.cmd [[autocmd FileType help wincmd L]]
 
 -- prevent comment lines from continuing 
 vim.cmd [[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]]
+
+

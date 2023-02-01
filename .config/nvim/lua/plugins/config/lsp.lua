@@ -1,4 +1,3 @@
-local map = require 'utils.keymap'
 local lsp = require 'lspconfig'
 
 local lsp_servers = {
@@ -17,12 +16,6 @@ require('mason').setup()
 require('mason-lspconfig').setup {
 	ensure_installed = lsp_servers,
 }
-
-local opts = { noremap = true, silent = true }
-map('n', 'gD', '<Cmd>lua vim.lsp.buf.declaration()<CR>', opts)
-map('n', 'gd', '<Cmd>lua vim.lsp.buf.definition()<CR>', opts)
-map('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opts)
-map('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>', opts)
 
 local on_attach = function(client)
 	client.server_capabilities.documentFormattingProvider = false
