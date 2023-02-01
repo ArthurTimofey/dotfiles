@@ -13,12 +13,15 @@ local getKey = function(key)
 	return '<' .. ctrlKey .. '-' .. key .. '>'
 end
 
+-- Leader Key
+vim.g.mapleader = ','
+
 -- CTRL + Keys
 -- Swapping default vim keys
-swapKeys('n', '<c-w>', '<a-w>')
-swapKeys('n', '<c-6>', '<a-6>')
-swapKeys('n', '<c-o>', '<a-o>')
-swapKeys('n', '<c-r>', '<a-r>')
+swapKeys('n', '<c-w>', getKey 'w')
+swapKeys('n', '<c-6>', getKey '6')
+swapKeys('n', '<c-o>', getKey 'o')
+swapKeys('n', '<c-r>', getKey 'r')
 
 map('n', getKey 's', ':w<CR>')
 map('i', getKey 's', '<ESC>:w<CR>')
