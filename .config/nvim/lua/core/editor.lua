@@ -20,7 +20,9 @@ vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.shiftround = true
 vim.opt.expandtab = true
-vim.opt.paste = true
+
+-- auto refresh buffers when files change
+vim.cmd 'autocmd FocusGained,BufEnter * checktime'
 
 vim.cmd [[autocmd FileType help wincmd L]]
 
