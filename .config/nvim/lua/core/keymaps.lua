@@ -64,3 +64,14 @@ map('n', getKey 'n', ':NvimTreeFindFileToggle<CR>')
 
 -- Custom Functions
 map('n', '<leader>cd', ':lua copy_last_diagnostic()<CR>')
+-- clear session
+map('n', '<leader>cs', ':lua clear_session()<CR>')
+
+function _G.clear_session()
+	local session_dir = vim.fn.stdpath 'data' .. '/sessions'
+	local root_dir = vim.fn.getcwd()
+	local session_file = string.gsub(root_dir, '/', '%%') .. '.vim'
+	local current_session_file_path = session_dir .. '/' .. session_file
+	print(current_session_file_path)
+	vim.fn.delete(current_session_file_path)
+end
