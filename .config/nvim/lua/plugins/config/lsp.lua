@@ -9,7 +9,7 @@ local lsp_servers = {
 	'taplo',
 	'svelte',
 	'rust_analyzer',
-	'sumneko_lua',
+	'lua_ls',
 }
 
 require('mason').setup()
@@ -43,7 +43,7 @@ lsp.rust_analyzer.setup {
 	},
 }
 
-lsp.sumneko_lua.setup {
+lsp.lua_ls.setup {
 	on_attach = on_attach,
 	settings = {
 		Lua = {
