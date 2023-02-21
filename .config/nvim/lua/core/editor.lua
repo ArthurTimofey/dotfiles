@@ -28,3 +28,20 @@ vim.cmd [[autocmd FileType help wincmd L]]
 
 -- prevent comment lines from continuing
 vim.cmd [[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]]
+
+local isMac = vim.loop.os_uname().sysname == 'Darwin'
+
+if isMac == false then
+	vim.g.clipboard = {
+		name = 'win32yank-wsl',
+		copy = {
+			['+'] = 'win32yank.exe -i --crlf',
+			['*'] = 'win32yank.exe -i --crlf',
+		},
+		paste = {
+			['+'] = 'win32yank.exe -o --lf',
+			['*'] = 'win32yank.exe -o --lf',
+		},
+		cache_enabled = 0,
+	}
+end

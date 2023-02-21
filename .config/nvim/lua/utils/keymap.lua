@@ -1,5 +1,5 @@
 local map = function(type, key, value, opts)
-	local options = { noremap = true, replace_keycodes = false }
+	local options = { noremap = true }
 
 	if opts then
 		options = vim.tbl_extend('force', options, opts)

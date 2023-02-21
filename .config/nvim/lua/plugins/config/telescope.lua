@@ -1,5 +1,7 @@
 local telescope = require 'telescope'
 
+local map = require 'utils.keymap'
+
 telescope.setup {
 	defaults = {
 		prompt_prefix = '🔍 ',

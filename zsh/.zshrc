@@ -27,4 +27,8 @@ export PNPM_HOME="/Users/$USER/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
+export GOPATH="$HOME/go"
+export PATH=$PATH:$GOPATH/bin
 
+export CARGO_HOME="$HOME/.cargo"
+export PATH="$HOME/.surrealdb:$PATH"

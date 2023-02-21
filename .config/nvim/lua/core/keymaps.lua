@@ -54,8 +54,13 @@ map('n', 'K', '<Cmd>lua vim.lsp.buf.hover()<CR>')
 local builtin = require 'telescope.builtin'
 map('n', getKey 'p', builtin.find_files, {})
 map('n', getKey 'g', builtin.live_grep, {})
+-- telescope on current file live_grep
+map('n', '<leader>fg', builtin.current_buffer_fuzzy_find, {})
 map('n', '<leader>fb', builtin.buffers, {})
 map('n', '<leader>fh', builtin.help_tags, {})
 
 -- NvimTree
 map('n', getKey 'n', ':NvimTreeFindFileToggle<CR>')
+
+-- Custom Functions
+map('n', '<leader>cd', ':lua copy_last_diagnostic()<CR>')

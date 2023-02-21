@@ -51,3 +51,19 @@ vim.api.nvim_create_autocmd('CursorHold', {
 		vim.diagnostic.open_float(nil, opts)
 	end,
 })
+
+-- function to get most recent diagnostics message and to put in the clipboard
+function _G.copy_last_diagnostic()
+	local line = vim.fn.line '.' - 1
+	local bufnr = vim.api.nvim_win_get_buf(0)
+	local diags = vim.lsp.diagnostic.get_line_diagnostics(bufnr, line)
+
+	if #diags == 0 then
+		return
+	end
+
+	local message = diags[1].message
+	vim.fn.setreg('+', message)
+
+	vim.api.nvim_echo({ { 'Copied diagnostic message to clipboard: ' .. line .. message, 'None' } }, true, {})
+end
