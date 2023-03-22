@@ -23,4 +23,5 @@ require 'plugins.config.diagnostics'
 require 'plugins.config.auto-session'
 require 'plugins.config.rust-tools'
 require 'plugins.config.vim-illuminate'
--- require('plugins.config.barbar')
+
+require 'core.globals'

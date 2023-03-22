@@ -61,3 +61,11 @@ lsp.tsserver.setup {
 	on_attach = on_attach,
 	format = false,
 }
+
+lsp.svelte.setup {
+	on_attach = on_attach,
+}
+
+lsp.cssls.setup {
+	on_attach = on_attach,
+}

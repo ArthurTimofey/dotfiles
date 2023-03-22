@@ -9,11 +9,13 @@ alias rt="rtouch"
 alias userArturs="git config --global user.email "$PERSONAL_EMAIL" && git config --global user.name ArthurTimofey"
 alias userSixty="git config --global user.email "$SIXTY_EMAIL" && git config --global user.name ArtursTimofejevs"
 alias vi="nvim"
-alias dotfiles="cd ~/.dotfiles"
+alias dotfiles="cd ~/.dotfiles && vi"
 alias yarn-clean="rm -rf node_modules && rm -rf yarn.lock && yarn"
 
 # alias to delete all node_modules folders in current directory and subdirectories
 alias nmd="find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
+
+alias act-arm="act --container-architecture linux/amd64 "
 
 
 cap() {

@@ -35,9 +35,11 @@ map('n', '<leader>g', ':Cap ')
 map('n', '<leader>qa', ':qa<CR>')
 map('n', '<leader>cp', ':let @+=expand("%:p")<CR>')
 
--- Floaterm
-map('n', '<leader>tt', ':FloatermNew<CR> ')
-map('n', '<leader>t', ':FloatermToggle<CR>')
+-- Nvim Term
+map('n', '<leader>tt', ':FloatermNew <CR>')
+map('n', '<leader>t', ':FloatermToggle <CR>')
+map('n', '<Left>', ':FloatermPrev <CR>')
+map('n', '<Right>', ':FloatermNext <CR>')
 map('t', '<Esc>', '<C-\\><C-n>:q<CR>')
 
 -- CommentToggle
@@ -58,6 +60,8 @@ map('n', getKey 'g', builtin.live_grep, {})
 map('n', '<leader>fg', builtin.current_buffer_fuzzy_find, {})
 map('n', '<leader>fb', builtin.buffers, {})
 map('n', '<leader>fh', builtin.help_tags, {})
+-- show files hidden by .gitignore
+map('n', '<leader>ff', builtin.git_files)
 
 -- NvimTree
 map('n', getKey 'n', ':NvimTreeFindFileToggle<CR>')

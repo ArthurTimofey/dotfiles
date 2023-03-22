@@ -47,6 +47,7 @@ return require('packer').startup(function(use)
 		'simrat39/rust-tools.nvim',
 		'voldikss/vim-floaterm',
 		'RRethy/vim-illuminate',
+		'mattn/emmet-vim',
 		-- 'romgrk/barbar.nvim',
 		'nanozuki/tabby.nvim',
 		'norcalli/nvim-colorizer.lua',
