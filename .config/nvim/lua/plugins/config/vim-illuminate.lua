@@ -49,9 +49,9 @@ require('illuminate').configure {
 local colors = require 'core.theme'
 
 local command = '\
-hi def IlluminatedWordText guibg=' .. colors.bg1 .. '\
-hi def IlluminatedWordRead guibg=' .. colors.bg1 .. '\
-hi def IlluminatedWordWrite guibg=' .. colors.bg1 .. '\
+hi def IlluminatedWordText guibg=' .. colors.surface0 .. '\
+hi def IlluminatedWordRead guibg=' .. colors.surface0 .. '\
+hi def IlluminatedWordWrite guibg=' .. colors.surface0 .. '\
 '
 
 vim.cmd(command)

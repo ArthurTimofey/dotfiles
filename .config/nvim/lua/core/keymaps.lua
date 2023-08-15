@@ -31,7 +31,8 @@ map('v', getKey 's', '<ESC>:w<CR>')
 map('n', '<leader>h', ':nohlsearch<CR>')
 map('n', '<leader>s', ':noautocmd w<CR>')
 map('n', '<leader>a', ':luafile ~/.config/nvim/init.lua<CR>')
-map('n', '<leader>g', ':Cap ')
+-- map('n', '<leader>g', ':Cap ')
+map('n', '<leader>g', ':LazyGit<CR>')
 map('n', '<leader>qa', ':qa<CR>')
 map('n', '<leader>cp', ':let @+=expand("%:p")<CR>')
 
@@ -63,6 +64,10 @@ map('n', '<leader>fh', builtin.help_tags, {})
 -- show files hidden by .gitignore
 map('n', '<leader>ff', builtin.git_files)
 
+-- map - toggle copilot
+map('n', '<leader>cf', ':Copilot disable<CR>')
+map('n', '<leader>cn', ':Copilot enable<CR>')
+
 -- NvimTree
 map('n', getKey 'n', ':NvimTreeFindFileToggle<CR>')
 
@@ -79,3 +84,9 @@ function _G.clear_session()
 	print(current_session_file_path)
 	vim.fn.delete(current_session_file_path)
 end
+
+-- move around panes using arrow keys
+map('n', '<Up>', ':wincmd k<CR>')
+map('n', '<Down>', ':wincmd j<CR>')
+map('n', '<Left>', ':wincmd h<CR>')
+map('n', '<Right>', ':wincmd l<CR>')

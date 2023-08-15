@@ -39,5 +39,6 @@ ffd() {
     find . -name "$1" -type d -exec rm -rf {} \;
 }
 
-
-
+cpdf () { 
+  gs -q -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile="$1" "${@:2}"
+}

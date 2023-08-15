@@ -1,6 +1,18 @@
 local telescope = require 'telescope'
+local transform_mod = require('telescope.actions.mt').transform_mod
+local actions = require 'telescope.actions'
 
 local map = require 'utils.keymap'
+
+local mod = {}
+
+mod.open_in_nvim_tree = function(prompt_bufnr)
+	local cur_win = vim.api.nvim_get_current_win()
+	vim.cmd 'NvimTreeFindFile'
+	vim.api.nvim_set_current_win(cur_win)
+end
+
+mod = transform_mod(mod)
 
 telescope.setup {
 	defaults = {
@@ -20,6 +32,14 @@ telescope.setup {
 			'--column',
 			'--smart-case',
 			'--trim',
+		},
+		mappings = {
+			i = {
+				['<CR>'] = actions.select_default + mod.open_in_nvim_tree,
+			},
+			n = {
+				['<CR>'] = actions.select_default + mod.open_in_nvim_tree,
+			},
 		},
 	},
 	pickers = {

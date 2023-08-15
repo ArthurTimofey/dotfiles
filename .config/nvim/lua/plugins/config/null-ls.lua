@@ -15,6 +15,7 @@ local fileTypes = {
 	'svelte',
 	'cjs',
 	'postcss',
+	'sh',
 }
 
 local eslintFileTypes = {

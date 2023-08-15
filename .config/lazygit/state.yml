@@ -1,0 +1,14 @@
+lastupdatecheck: 0
+recentrepos:
+- /Users/arturs/.dotfiles
+- /Users/arturs/src/infrastructure
+- /Users/arturs/src/client-dashboard-2.0
+- /Users/arturs/src/artisa-shop
+- /Users/arturs/src/scripts-temple
+- /Users/arturs/src/gpt4-pdf-chatbot-langchain
+- /Users/arturs/src/modern-saas
+startuppopupversion: 5
+customcommandshistory:
+- qa
+hidecommandlog: false
+ignorewhitespaceindiffview: false

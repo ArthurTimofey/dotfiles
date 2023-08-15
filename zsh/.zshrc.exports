@@ -15,3 +15,8 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # FZF
 export FZF_DEFAULT_COMMAND='ag -l --path-to-ignore ~/.ignore --nocolor --hidden -g ""'
 export FZF_DEFAULT_OPTS='--preview "bat --style=numbers --color=always --line-range :500 {}"'
+
+# DOCKER
+export PATH="$PATH:/Applications/Docker.app/Contents/Resources/bin/"
+export XDG_CONFIG_HOME="$HOME/.config"
+

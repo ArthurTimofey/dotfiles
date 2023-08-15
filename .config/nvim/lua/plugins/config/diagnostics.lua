@@ -27,13 +27,17 @@ end
 
 vim.diagnostic.config {
 	-- disable inline Diagnostics
+	-- underline = true,
+	-- virtual_text = false,
+	-- Disable underline
 	underline = true,
-	virtual_text = false,
+	-- Show signs
+	signs = true,
 }
 
 vim.o.updatetime = 250
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
-vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
+-- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})]]
+-- vim.cmd [[autocmd! CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false, scope="cursor"})]]
 
 vim.api.nvim_create_autocmd('CursorHold', {
 	callback = function()
@@ -41,14 +45,15 @@ vim.api.nvim_create_autocmd('CursorHold', {
 			header = { icons.debug .. ' Diagnostics:', 'Normal' },
 			-- align header
 			focusable = false,
+
 			close_events = { 'BufLeave', 'CursorMoved', 'InsertEnter', 'FocusLost' },
 			border = 'rounded',
 			source = false,
 			prefix = ' ',
-			scope = 'cursor',
 			format = format,
+			scope = 'line',
 		}
-		vim.diagnostic.open_float(nil, opts)
+		-- vim.diagnostic.open_float(nil, opts)
 	end,
 })
 

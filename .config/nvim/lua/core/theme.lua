@@ -1,9 +1,10 @@
 vim.o.termguicolors = true
-vim.cmd [[ colorscheme onedark ]]
 
-require('onedark').setup({
-  style = 'dark'
-})
-require('onedark').load()
+require('catppuccin').setup {
+	style = 'mocha',
+}
+require('catppuccin').load()
 
-return require('onedark.colors')
+vim.cmd [[ colorscheme catppuccin ]]
+
+return require("catppuccin.palettes").get_palette "mocha"

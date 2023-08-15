@@ -50,3 +50,5 @@
     ~/.ssh/config: .ssh/config
     ~/.ignore: .ignore
     ~/.oh-my-zsh/custom/themes/spaceship.zsh-theme: ~/.oh-my-zsh/custom/themes/spaceship-prompt/spaceship.zsh-theme
+    ~/.config/tmux/tmux.conf: .config/tmux/.tmux.conf
+    ~/.config/lazygit: .config/lazygit

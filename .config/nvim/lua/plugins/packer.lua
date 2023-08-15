@@ -54,6 +54,9 @@ return require('packer').startup(function(use)
 		-- themes
 		'ellisonleao/gruvbox.nvim',
 		'navarasu/onedark.nvim',
+		'christoomey/vim-tmux-navigator',
+		{ 'catppuccin/nvim', as = 'catppuccin' },
+		'kdheepak/lazygit.nvim',
 	}
 
 	-- Automatically set up your configuration after cloning packer.nvim
