@@ -32,3 +32,6 @@ export PATH=$PATH:$GOPATH/bin
 
 export CARGO_HOME="$HOME/.cargo"
 export PATH="$HOME/.surrealdb:$PATH"
+
+# bun completions
+[ -s "/Users/arturs/.bun/_bun" ] && source "/Users/arturs/.bun/_bun"

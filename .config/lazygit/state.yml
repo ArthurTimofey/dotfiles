@@ -1,8 +1,12 @@
 lastupdatecheck: 0
 recentrepos:
 - /Users/arturs/.dotfiles
-- /Users/arturs/src/infrastructure
+- /Users/arturs/src/pixi
 - /Users/arturs/src/client-dashboard-2.0
+- /Users/arturs/src/infrastructure
+- /Users/arturs/src/adventofcode
+- /Users/arturs/src/eventgenerator
+- /Users/arturs/src/megGPT
 - /Users/arturs/src/artisa-shop
 - /Users/arturs/src/scripts-temple
 - /Users/arturs/src/gpt4-pdf-chatbot-langchain
@@ -11,4 +15,4 @@ startuppopupversion: 5
 customcommandshistory:
 - qa
 hidecommandlog: false
-ignorewhitespaceindiffview: false
+ignorewhitespaceindiffview: true
